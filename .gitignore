@@ -1,25 +1,10 @@
 /build/
+.settings/org.eclipse.wst.common.project.facet.core.xml
 
-.metadata
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.settings/
-.loadpath
-.recommenders
-
-
-# Eclipse Core
-.project
-
-# Locally stored "Eclipse launch configurations"
-*.launch
-
-# JDT-specific (Eclipse Java Development Tools)
 .classpath
 
-contributors.txt
+build/classes/controller/AdminLoginServlet.class
+
+build/classes/dao/AdminUserDAO.class
+
+build/classes/controller/PharmacistServlet.class

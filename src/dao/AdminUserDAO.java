@@ -18,7 +18,7 @@ public enum AdminUserDAO {
     try {
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(
-    		  "jdbc:mysql://192.168.23.105:3306/UserDB", "root", "");
+    		  "jdbc:mysql://192.168.223.48:3306/UserDB", "root", "");
     } catch (Exception e) {
       e.printStackTrace();
     }

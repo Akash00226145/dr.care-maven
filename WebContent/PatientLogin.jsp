@@ -63,7 +63,7 @@
 											<a href="#">About Us</a>
 										</li>
 										<li>
-											<a href="#">Shocial Media</a>
+											<a href="#">Social Media</a>
 										</li>
 									</ul>
 							</li>

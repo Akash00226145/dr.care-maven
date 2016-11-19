@@ -1,1 +1,0 @@
-# This is Dr. care Project Git repo

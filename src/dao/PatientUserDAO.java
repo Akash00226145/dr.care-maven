@@ -18,7 +18,7 @@ public enum PatientUserDAO {
     try {
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(
-    		  "jdbc:mysql://localhost/UserDB", "root", "3Jodie99");
+    		  "jdbc:mysql://localhost:3306/userdb", "root", "3Jodie99");
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -47,7 +47,7 @@ public enum PatientUserDAO {
 
     try {
       PreparedStatement psmt = connection
-          .prepareStatement("SELECT * FROM USER WHERE EMAIL = ? AND PASSWORD = ?");
+          .prepareStatement("SELECT * FROM PATIENT WHERE EMAIL = ? AND PASSWORD = ?");
       psmt.setString(1, email);
       psmt.setString(2, password);
       ResultSet rs = psmt.executeQuery();

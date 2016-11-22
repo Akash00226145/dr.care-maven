@@ -8,5 +8,9 @@ $(document).ready(function(){
 			var url = "details.html?id="+value;
 			window.location.href= url;*/
 		});
-
+		
+		$(".ots-btn").click(function(){
+			 window.location.href='OtherStaffLogin.jsp';
+			
+		});
 });

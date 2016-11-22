@@ -112,7 +112,21 @@
 						<h3 class="btn btn-warning btn-block select-btn">LOGIN</h3>
 					</div>
 				</div> 
+				
+				<div class="col-sm-4 feture">
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">Other Medical Staff</h3>
+							
+						</div>
+						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
+						<p>Medical Staff login here</p>
+						<h3 class="btn btn-warning btn-block ots-btn">LOGIN</h3>
+					</div>
+				</div> 
 			</div>
+			
+			
 
 
 			<div class="row" id="moreInfo">

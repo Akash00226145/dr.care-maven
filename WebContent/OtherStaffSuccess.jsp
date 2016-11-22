@@ -100,7 +100,10 @@
 
 
 			<h1>Medical Staff Login Successful</h1>	
-
+			<h2>You can search the Details for patients</h2>	
+			<a class="btn btn-primary" href="#">Medication history</a>
+			<a class="btn btn-info" href="#">Details of allergies</a>
+			<a class="btn btn-success" href="#">details of prescription</a>
 
 			<div class="row" id="moreInfo">
 					

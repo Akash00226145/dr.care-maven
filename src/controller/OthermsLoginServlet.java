@@ -47,13 +47,13 @@ public class OthermsLoginServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		OthermsUser user = OTHERMSDAO.instance.checkLogin(name, password);
 		if (user != null) {
-			System.out.println("Yes password mached");
+			System.out.println("Password is matched");
 			HttpSession session = request.getSession();
 			session.setAttribute("user", user);
 			request.getRequestDispatcher("OtherStaffSuccess.jsp").forward(request, response);
 		} else {
 			request.getRequestDispatcher("index.jsp").forward(request, response);
-			System.out.println("not mached");
+			System.out.println("Password not matched");
 		}
 	}
 

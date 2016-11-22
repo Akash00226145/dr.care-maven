@@ -23,3 +23,8 @@ local.properties
 .classpath
 
 contributors.txt
+
+#NetBeans related
+/nbproject/
+/nbbuild/
+build.xml

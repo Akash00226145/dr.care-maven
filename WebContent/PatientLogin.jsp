@@ -25,7 +25,7 @@
 
 	</head>
 	<body>
-	
+ 	
 		<div class="container" id="main">
 
 			<div class="navbar navbar-fixed-top">
@@ -73,29 +73,29 @@
 							<input type="text" class="form-control" placeholder="Search product..." id="searchInput">
 							<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 						</form><!-- end navbar-form -->
-						
+ 						
 						<ul class="nav navbar-nav pull-right">
 							<li>
 								<a href="#"><span class="glyphicon glyphicon-user"></span>My Account</a>
 							</li>
 						</ul><!-- end nav pull-right -->
-
+ 
 					</div><!-- end nav-collapse -->
-				</div><!-- end container -->
+ 				</div><!-- end container -->
 				
-			</div><!-- end navbar-->
+ 			</div><!-- end navbar-->
 
-			<div class="row" id="featuresHeading">
+ 			<div class="row" id="featuresHeading">
 				<div class="col-12">
 					
 				</div>
 				
 			</div>
 
-
-			<div class="container">
+		 
+			<div class="container" style="background-color: grey;">
 			 <form class="form-signin"  method="post" action="PatientLoginServlet">
-			        <h2 class="form-signin-heading">Please sign in</h2>
+			        <h2 class="form-signin-heading">Patient Sign In</h2>
 			        <label for="inputEmail" class="sr-only">User Name</label>
 			        <input type="email" id="inputEmail" class="form-control" placeholder="User Name" name="email" required autofocus>
 			        <label for="inputPassword" class="sr-only">Password</label>
@@ -122,12 +122,12 @@
 
 		</div><!-- end container -->
 
-		<footer class="footer">
+ 		<footer class="footer">
 			<div class="container">
 				<div class="row">
 						<img src="asset/images/HTML5White.png" 
 					width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered">
-					<p>&copy; copyright 2016 AIT SRI Web Society</p>
+					<p>&copy; AIT A00107408</p>
 				</div>
 			</div>
 		</footer>

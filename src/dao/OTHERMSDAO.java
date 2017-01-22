@@ -18,7 +18,7 @@ public enum OTHERMSDAO {
     try {
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(
-    		  "jdbc:mysql://localhost:3306/sys", "root", "root");
+    		  "jdbc:mysql://79.97.123.177:3306/drcare", "Doctors_Care", "MSc_2017");
     } catch (Exception e) {
       e.printStackTrace();
     }

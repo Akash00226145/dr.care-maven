@@ -18,7 +18,7 @@ public enum AdminUserDAO {
     try {
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(
-    		  "jdbc:mysql://192.168.23.105:3306/UserDB", "root", "");
+    		  "jdbc:mysql://79.97.123.177:3306/drcare", "Doctors_Care", "MSc_2017");
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -30,7 +30,7 @@ public enum AdminUserDAO {
 
     try {
       PreparedStatement psmt = connection
-          .prepareStatement("INSERT INTO USER (email, password, address) VALUES (?, ?, ?)");
+          .prepareStatement("INSERT INTO ADMIN_USER (email, password, address) VALUES (?, ?, ?)");
       psmt.setString(1, user.getEmail());
       psmt.setString(2, user.getPassword());
       psmt.setString(3, user.getAddress());
@@ -47,7 +47,7 @@ public enum AdminUserDAO {
 
     try {
       PreparedStatement psmt = connection
-          .prepareStatement("SELECT * FROM USER WHERE EMAIL = ? AND PASSWORD = ?");
+          .prepareStatement("SELECT * FROM ADMIN_USER WHERE EMAIL = ? AND PASSWORD = ?");
       psmt.setString(1, email);
       psmt.setString(2, password);
       ResultSet rs = psmt.executeQuery();

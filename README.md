@@ -22,7 +22,11 @@ This README would normally document whatever steps are necessary to get your app
 * Writing tests
 * Code review
 * Other guidelines
+<<<<<<< HEAD
+
+=======
 * akash line is added
+>>>>>>> 032898da5358dc98b12a675858b872deea4db540
 ### Who do I talk to? ###
 
 * Repo owner or admin

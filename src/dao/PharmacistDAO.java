@@ -6,9 +6,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import model.Pharmacist;
-
+import model.PatientUser;
 public enum PharmacistDAO {
   instance;
 
@@ -18,7 +20,7 @@ public enum PharmacistDAO {
     try {
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(
-    		  "jdbc:mysql://localhost:3306/drcare", "root", "123456");
+    		  "jdbc:mysql://79.97.123.177:3306/drcare", "Doctors_Care", "MSc_2017");
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -30,7 +32,7 @@ public enum PharmacistDAO {
 
     try {
       PreparedStatement psmt = connection
-          .prepareStatement("INSERT INTO Pharmacist (usename, password, address) VALUES (?, ?, ?)");
+          .prepareStatement("INSERT INTO Pharmacist (username, password, address) VALUES (?, ?, ?)");
       psmt.setString(1, phar.getUsername());
       psmt.setString(2, phar.getPassword());
       psmt.setString(3, phar.getAddress());
@@ -47,17 +49,34 @@ public enum PharmacistDAO {
 
     try {
       PreparedStatement psmt = connection
-          .prepareStatement("SELECT * FROM Pharmacist WHERE USENAME = ? AND PASSWORD = ?");
+          .prepareStatement("SELECT * FROM Pharmacist WHERE USERNAME = ? AND PASSWORD = ?");
       psmt.setString(1, username);
       psmt.setString(2, password);
       ResultSet rs = psmt.executeQuery();
       if (rs.next()) {
-        phar = new Pharmacist(rs.getInt("id"), rs.getString("usename"), rs.getString("password"), rs.getString("address")) ;
+        phar = new Pharmacist(rs.getInt("id"), rs.getString("username"), rs.getString("password"), rs.getString("address")) ;
       }
     } catch (SQLException e) {
       e.printStackTrace();
     }
     return phar ;
   }
-
+  public List<PatientUser> list() {
+	    Connection connection = getConnection();
+	    List<PatientUser>  PatientUser= new ArrayList<PatientUser>();
+   
+	    try {
+	      PreparedStatement psmt = connection
+	          .prepareStatement("SELECT * FROM patient");
+	     
+	      ResultSet rs = psmt.executeQuery();
+	      while (rs.next()) {
+	    	  PatientUser p = new PatientUser(rs.getInt("id"), rs.getString("email"), rs.getString("password"), rs.getString("address")) ;
+	    	  PatientUser.add(p);
+	      }
+	    } catch (SQLException e) {
+	      e.printStackTrace();
+	    }
+	    return PatientUser;
+	  }
 }

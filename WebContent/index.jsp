@@ -124,10 +124,48 @@
 						<h3 class="btn btn-warning btn-block ots-btn">LOGIN</h3>
 					</div>
 				</div> 
-			</div>
-			
-			
+				
+				<div class="col-sm-4 feture">
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">Patient Login</h3>
+							
+						</div>
+						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
+						<p>Patient login here</p>
+						<h3 class="btn btn-warning btn-block pat1-btn">LOGIN</h3>
+					</div>
+				</div> 
+				
+				<div class="col-sm-4 feture">
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">Pharmacist Login</h3>
+							
+						</div>
+						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
+						<p>pharmacist login here</p>
+						<h3 class="btn btn-warning btn-block pha1-btn">LOGIN</h3>
+					</div>
+				</div> 
+				
+				<div class="col-sm-4 feture">
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">GP Login</h3>
+							
+						</div>
+						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
+						<p>GP login here</p>
+						<h3 class="btn btn-warning btn-block pha1-btn">LOGIN</h3>
+					</div>
+				</div> 
+				
+				
 
+			</div>
+				
+				
 
 			<div class="row" id="moreInfo">
 				

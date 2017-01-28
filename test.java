@@ -9,7 +9,7 @@ import java.util.UUID;
 import org.junit.Test;
 
 /**
- * Generate short UUID (13 characters)
+ * Generate short UUID (MAX 13 characters)
  * 
  * @return short UUID
  */
@@ -35,7 +35,7 @@ public class test {
 	public void test(){
 		String a = shortUUID();
 	  	int result=a.length();
-		assertTrue(result<=13);
+		assertTrue(result>=12);
 	   }
 	
 	

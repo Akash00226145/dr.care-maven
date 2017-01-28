@@ -20,7 +20,7 @@ public enum PharmacistDAO {
     try {
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(
-    		  "jdbc:mysql://79.97.123.177:3306/drcare", "Doctors_Care", "MSc_2017");
+    		  "jdbc:mysql://192.168.23.78:3306/UserDB", "root", "");
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -49,7 +49,7 @@ public enum PharmacistDAO {
 
     try {
       PreparedStatement psmt = connection
-          .prepareStatement("SELECT * FROM Pharmacist WHERE USERNAME = ? AND PASSWORD = ?");
+          .prepareStatement("SELECT * FROM pharmacist WHERE USERNAME = ? AND PASSWORD = ?");
       psmt.setString(1, username);
       psmt.setString(2, password);
       ResultSet rs = psmt.executeQuery();
@@ -71,7 +71,7 @@ public enum PharmacistDAO {
 	     
 	      ResultSet rs = psmt.executeQuery();
 	      while (rs.next()) {
-	    	  PatientUser p = new PatientUser(rs.getInt("id"), rs.getString("email"), rs.getString("password"), rs.getString("address")) ;
+	    	  PatientUser p = new PatientUser(rs.getInt("id"), rs.getString("email"), rs.getString("password")) ;
 	    	  PatientUser.add(p);
 	      }
 	    } catch (SQLException e) {

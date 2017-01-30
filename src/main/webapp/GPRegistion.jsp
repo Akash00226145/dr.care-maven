@@ -113,7 +113,7 @@
 			        <input type="text" id="inputGPPhone" class="form-control" placeholder="GP Phone" name="gpphone" required autofocus><br>
 			        <label for="gpaddress" class="sr-only">File Upload</label>
 			        <input type="text" id="inputFileUpload" class="form-control" placeholder="GP File" name="gpfile" required autofocus> 
-			        <button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right: 0;">Upload File</button>
+			        <button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;">Upload File</button>
 			       
 			        <label for="inputPassword" class="sr-only">Generate Unique Password</label>
 			        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password"> <button class="btn btn-lg btn-primary btn-block" type="submit">Generate Password</button>

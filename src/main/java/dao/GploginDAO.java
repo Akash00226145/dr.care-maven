@@ -36,7 +36,8 @@ public enum GploginDAO {
       psmt.setString(2, password);
       ResultSet rs = psmt.executeQuery();
       if (rs.next()) {
-        user = new GPuser(rs.getInt("id"), rs.getString("email"), rs.getString("name"), rs.getString("password"), rs.getString("address")) ;
+        user = new GPuser(rs.getInt("id"), rs.getString("name"), rs.getString("email"), rs.getString("address"),
+        		rs.getInt("phone"), rs.getString("password")) ;
 
       }
     } catch (SQLException e) {

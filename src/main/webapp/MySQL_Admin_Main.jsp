@@ -22,7 +22,60 @@
 		
 		<script type="text/javascript" src="asset/js/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="asset/js/custom.js"></script>
+<style>
 
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3366cc;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+     max-width: 100% !important;
+      color: #ffffff;
+     border-color: #474949;
+      width: 100%;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+   
+     background-color: #336699;
+  border-color: #2e2f2f;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #0000FF}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+</style>
 	</head>
 	<body>
 	
@@ -100,34 +153,44 @@
 
 
 			<div class="container">
-			 <form class="form-signin"  method="post" action="GPRegisterServlet">
+			
+			 <form class="form-signin"  method="post" action="OthermsLoginServlet">
+			 
 			       
-			        <h2 class="form-signin-heading"   style="font-family: cursive;">Add a GP:</h2><br>
-			        
-			        <label for="GPName" class="sr-only">GP Name</label>
-			        <input type="text" id="inputGPName" class="form-control" placeholder="GP Name" name="gpusername" required autofocus><br>
-			        
-			        <label for="gpEmail" class="sr-only">GP email</label>
-			        <input type="text" id="inputEmail" class="form-control" placeholder="GP email" name="gpemail" required autofocus><br>
-			        
-			        <label for="gpAddress" class="sr-only">GP Address</label>
-			        <input type="text" id="inputGPAddress" class="form-control" placeholder="GP Address" name="gpaddress" required autofocus><br>
-			        
-			        <label for="gpPhone" class="sr-only">GP PhoneNumber</label>  
-			        <input type="text" id="inputGPPhone" class="form-control" placeholder="GP Phone" name="gpphone" required autofocus><br>
-    			       
-			        <label for="UUIDPassword" class="sr-only">Generate Unique Password</label>
-			        <input type="password" id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword"> <button class="btn btn-lg btn-primary btn-block" type="submit">Generate UUID</button>
+			            <h2 class="form-signin-heading"   style="font-family: cursive;">MySQL DataBase</h2>
 			       
-			        <div class="checkbox">
-			       <!-- <label>
-			            <input type="checkbox" value="remember-me"> Remember me
-			          </label> -->
-			        </div>
-			        <button class="btn btn-lg btn-primary btn-block" type="submit">Create GP</button>
+			       <br>
+  				
+  				
+  				</br>
+			      
+                  <div class="dropdown">
+ 					 <button onclick="myFunction()" class="dropbtn">DataBase Created</button>
+ 						 <div id="myDropdown" class="dropdown-content">
+   							 <a href="#">Create DataBase</a>
+   								 <a href="#">Backup</a>
+   									 <a href="#">Delete</a>
+  				</div>
+  				
+  				<br>
+  				
+  				
+  				</br>
+ 					  <button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;">Display DataBase</button>
+			       
+			         <button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;">Display Users Name</button>
+			       
+  
+  
+</div>
+			       
+			       
+			       
 			      </form>
-				
-			</div>
+		
+    </div>
+
+			
 
 
 			<div class="row" id="moreInfo">
@@ -165,5 +228,29 @@
 	
 	<!-- Custom JS -->
 	<script src="asset/includes/js/script.js"></script>
+	<script>
+	
+	/* When the user clicks on the button, 
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+	    document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	// Close the dropdown menu if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn')) {
+
+	    var dropdowns = document.getElementsByClassName("dropdown-content");
+	    var i;
+	    for (i = 0; i < dropdowns.length; i++) {
+	      var openDropdown = dropdowns[i];
+	      if (openDropdown.classList.contains('show')) {
+	        openDropdown.classList.remove('show');
+	      }
+	    }
+	  }
+	}
+	
+	</script>
 	
 	</body>

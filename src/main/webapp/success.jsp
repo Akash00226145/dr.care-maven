@@ -62,6 +62,13 @@
 										<li>
 											<a href="#">Patient Login</a>
 										</li>
+										
+										<li>
+											<a href="MySQLAdmin.jsp">MySQL Login</a>
+										</li>
+										
+										
+																				
 										<li class="divider"></li>
 
 										<li class="dropdown-header">More Services</li>
@@ -105,6 +112,7 @@
 			     </div>
 			      
 	 <h2 style="font-family: cursive;">Create GP
+	 
 	 <input type="submit" name="uploadsubmit" id="btnupload" value="create"  onclick="javascript:location.href='GPRegistion.jsp'"/>
 			       </h2>
 			        

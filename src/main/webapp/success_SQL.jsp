@@ -62,6 +62,13 @@
 										<li>
 											<a href="#">Patient Login</a>
 										</li>
+										
+										<li>
+											<a href="MySQLAdmin.jsp">MySQL Login</a>
+										</li>
+										
+										
+																				
 										<li class="divider"></li>
 
 										<li class="dropdown-header">More Services</li>
@@ -100,36 +107,15 @@
 
 
 			<div class="container">
-			 <form class="form-signin"  method="post" action="GPRegisterServlet">
-			       
-			        <h2 class="form-signin-heading"   style="font-family: cursive;">Add a GP:</h2><br>
-			        
-			        <label for="GPName" class="sr-only">GP Name</label>
-			        <input type="text" id="inputGPName" class="form-control" placeholder="GP Name" name="gpusername" required autofocus><br>
-			        
-			        <label for="gpEmail" class="sr-only">GP email</label>
-			        <input type="text" id="inputEmail" class="form-control" placeholder="GP email" name="gpemail" required autofocus><br>
-			        
-			        <label for="gpAddress" class="sr-only">GP Address</label>
-			        <input type="text" id="inputGPAddress" class="form-control" placeholder="GP Address" name="gpaddress" required autofocus><br>
-			        
-			        <label for="gpPhone" class="sr-only">GP PhoneNumber</label>  
-			        <input type="text" id="inputGPPhone" class="form-control" placeholder="GP Phone" name="gpphone" required autofocus><br>
-    			       
-			        <label for="UUIDPassword" class="sr-only">Generate Unique Password</label>
-			        <input type="password" id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword"> <button class="btn btn-lg btn-primary btn-block" type="submit">Generate UUID</button>
-			       
-			        <div class="checkbox">
-			       <!-- <label>
-			            <input type="checkbox" value="remember-me"> Remember me
-			          </label> -->
-			        </div>
-			        <button class="btn btn-lg btn-primary btn-block" type="submit">Create GP</button>
-			      </form>
-				
-			</div>
-
-
+			
+			        <h2 class="form-signin-heading"   style="font-family: cursive;">Login Successful</h2>
+			     </div>
+			      
+	 <h2 style="font-family: cursive;">Database =>
+	 
+	 <input type="submit" name="uploadsubmit" id="btnupload" value="GO"  onclick="javascript:location.href='MySQL_Admin_Main.jsp'"/>
+			       </h2>
+			     
 			<div class="row" id="moreInfo">
 					
 			</div>
@@ -167,3 +153,10 @@
 	<script src="asset/includes/js/script.js"></script>
 	
 	</body>
+
+
+
+
+
+
+

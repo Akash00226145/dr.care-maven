@@ -100,22 +100,22 @@
 
 
 			<div class="container">
-			 <form class="form-signin"  method="post" action="GPRegisterServlet">
+			 <form class="form-signin"  method="post" action="PatientListServlet">
 			       
-			        <h2 class="form-signin-heading"   style="font-family: cursive;">Add a GP:</h2><br>
+			        <h2 class="form-signin-heading"   style="font-family: cursive;">Add a Patient:</h2><br>
 			        
-			        <label for="GPName" class="sr-only">GP Name</label>
+			<!--         <label for="GPName" class="sr-only">Patient Name</label>
 			        <input type="text" id="inputGPName" class="form-control" placeholder="GP Name" name="gpusername" required autofocus><br>
-			        
-			        <label for="gpEmail" class="sr-only">GP email</label>
+			  -->      
+			        <label for="gpEmail" class="sr-only">Patient email</label>
 			        <input type="text" id="inputEmail" class="form-control" placeholder="GP email" name="gpemail" required autofocus><br>
 			        
-			        <label for="gpAddress" class="sr-only">GP Address</label>
+			        <label for="gpAddress" class="sr-only">Patient Address</label>
 			        <input type="text" id="inputGPAddress" class="form-control" placeholder="GP Address" name="gpaddress" required autofocus><br>
 			        
-			        <label for="gpPhone" class="sr-only">GP PhoneNumber</label>  
+		<!--         <label for="gpPhone" class="sr-only">Patient PhoneNumber</label>  
 			        <input type="text" id="inputGPPhone" class="form-control" placeholder="GP Phone" name="gpphone" required autofocus><br>
-    			       
+    	-->	       
 			        <label for="UUIDPassword" class="sr-only">Generate Unique Password</label>
 			        <input type="password" id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword"> <button class="btn btn-lg btn-primary btn-block" type="submit">Generate UUID</button>
 			       
@@ -124,7 +124,7 @@
 			            <input type="checkbox" value="remember-me"> Remember me
 			          </label> -->
 			        </div>
-			        <button class="btn btn-lg btn-primary btn-block" type="submit">Create GP</button>
+			        <button class="btn btn-lg btn-primary btn-block" type="submit">Create Patient</button>
 			      </form>
 				
 			</div>

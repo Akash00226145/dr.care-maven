@@ -25,11 +25,11 @@
 
 	</head>
 	<body>
-	
+ 	
 		<div class="container" id="main">
 
 			<div class="navbar navbar-fixed-top">
-				<div class="container" style="padding: 0;">
+				<div class="container">
 					
 					<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
 						<span class="icon-bar"></span>
@@ -48,19 +48,13 @@
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
 										<li>
-											<a href="adminlogin.jsp">Admin Login</a>
+											<a href="#">Web Design</a>
 										</li>
 										<li>
-											<a href="#">GP Login</a>
+											<a href="#">About Us</a>
 										</li>
 										<li>
-											<a href="#">Pharmacist Login</a>
-										</li>
-										<li>
-											<a href="OtherStaffLogin.jsp">Other Staff Login</a>
-										</li>
-										<li>
-											<a href="#">Patient Login</a>
+											<a href="#">Contact Us</a>
 										</li>
 										<li class="divider"></li>
 
@@ -75,56 +69,43 @@
 							</li>
 						</ul>
 
-						<form class="navbar-form pull-left"  >
+						<form class="navbar-form pull-left" >
 							<input type="text" class="form-control" placeholder="Search product..." id="searchInput">
 							<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 						</form><!-- end navbar-form -->
-						
+ 						
 						<ul class="nav navbar-nav pull-right">
 							<li>
 								<a href="#"><span class="glyphicon glyphicon-user"></span>My Account</a>
 							</li>
 						</ul><!-- end nav pull-right -->
-
+ 
 					</div><!-- end nav-collapse -->
-				</div><!-- end container -->
+ 				</div><!-- end container -->
 				
-			</div><!-- end navbar-->
+ 			</div><!-- end navbar-->
 
-			<div class="row" id="featuresHeading">
+ 			<div class="row" id="featuresHeading">
 				<div class="col-12">
 					
 				</div>
 				
 			</div>
 
-
-			<div class="container">
-			 <form class="form-signin"  method="post" action="GPRegisterServlet">
-			       
-			        <h2 class="form-signin-heading"   style="font-family: cursive;">Add a GP:</h2><br>
-			        
-			        <label for="GPName" class="sr-only">GP Name</label>
-			        <input type="text" id="inputGPName" class="form-control" placeholder="GP Name" name="gpusername" required autofocus><br>
-			        
-			        <label for="gpEmail" class="sr-only">GP email</label>
-			        <input type="text" id="inputEmail" class="form-control" placeholder="GP email" name="gpemail" required autofocus><br>
-			        
-			        <label for="gpAddress" class="sr-only">GP Address</label>
-			        <input type="text" id="inputGPAddress" class="form-control" placeholder="GP Address" name="gpaddress" required autofocus><br>
-			        
-			        <label for="gpPhone" class="sr-only">GP PhoneNumber</label>  
-			        <input type="text" id="inputGPPhone" class="form-control" placeholder="GP Phone" name="gpphone" required autofocus><br>
-    			       
-			        <label for="UUIDPassword" class="sr-only">Generate Unique Password</label>
-			        <input type="password" id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword"> <button class="btn btn-lg btn-primary btn-block" type="submit">Generate UUID</button>
-			       
+		 
+			<div class="container" style="background-color: grey;">
+			 <form class="form-signin"  method="post" action="MySQLServlet">
+			        <h2 class="form-signin-heading">MySQL Sign In</h2>
+			        <label for="inputEmail" class="sr-only">User Name</label>
+			        <input type="email" id="inputEmail" class="form-control" placeholder="User Name" name="email" required autofocus>
+			        <label for="inputPassword" class="sr-only">Password</label>
+			        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
 			        <div class="checkbox">
-			       <!-- <label>
+			          <label>
 			            <input type="checkbox" value="remember-me"> Remember me
-			          </label> -->
+			          </label>
 			        </div>
-			        <button class="btn btn-lg btn-primary btn-block" type="submit">Create GP</button>
+			        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 			      </form>
 				
 			</div>
@@ -141,12 +122,12 @@
 
 		</div><!-- end container -->
 
-		<footer class="footer">
+ 		<footer class="footer">
 			<div class="container">
 				<div class="row">
 						<img src="asset/images/HTML5White.png" 
 					width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered">
-					<p>&copy; copyright 2016 AIT SRI Web Society</p>
+					<p>&copy; AIT A00200846</p>
 				</div>
 			</div>
 		</footer>
@@ -167,3 +148,4 @@
 	<script src="asset/includes/js/script.js"></script>
 	
 	</body>
+</html>

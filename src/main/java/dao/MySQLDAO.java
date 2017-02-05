@@ -21,16 +21,14 @@ public enum MySQLDAO {
 		public String getIP()
 		
 		{
-			 //BufferedReader br = null;
-			 
-			  try {
+			 try {
 				  
 			      BufferedReader br = new BufferedReader(new FileReader("sql_ip.txt"));
 			      try {
 			          
 			          while ( (x = br.readLine()) != null ) 
 			          {
-			        	  
+			        	  br.close();
 			        	  return x;			        	  
 			          }
 			      }

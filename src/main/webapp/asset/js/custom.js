@@ -29,4 +29,10 @@ $(document).ready(function(){
 		$(".gp-btn").click(function(){
 			 window.location.href='GPLogin.jsp';	
 		});
+		
+		$(".mysql-btn").click(function(){
+			//alert("This from custom document...");
+			 window.location.href='MySQLAdmin.jsp';
+			
+		});
 });

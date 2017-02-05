@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -12,6 +14,8 @@
 		<!-- Bootstrap CSS -->
 		<link href="asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link href="asset/includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+		<link href="asset/includes/css/signin.css" rel="stylesheet">
+		<link href="asset/includes/css/sticky-footer.css" rel="stylesheet">
 		
 		<!-- Custom CSS -->
 		<link href="asset/includes/css/styles.css" rel="stylesheet">
@@ -21,7 +25,7 @@
 
 	</head>
 	<body>
-	
+ 	
 		<div class="container" id="main">
 
 			<div class="navbar navbar-fixed-top">
@@ -37,8 +41,8 @@
 
 					<div class="nav-collapse collapse navbar-responsive-collapse">
 						<ul class="nav navbar-nav">
-							<li class="active">
-								<a href="#">Home</a>
+							<li>
+								<a href="index.jsp">Home</a>
 							</li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<strong class="caret"></strong></a>
@@ -59,7 +63,7 @@
 											<a href="#">About Us</a>
 										</li>
 										<li>
-											<a href="#">Shocial Media</a>
+											<a href="#">Social Media</a>
 										</li>
 									</ul>
 							</li>
@@ -69,115 +73,46 @@
 							<input type="text" class="form-control" placeholder="Search product..." id="searchInput">
 							<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 						</form><!-- end navbar-form -->
-						
+ 						
 						<ul class="nav navbar-nav pull-right">
 							<li>
-								<a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a>
+								<a href="#"><span class="glyphicon glyphicon-user"></span>My Account</a>
 							</li>
 						</ul><!-- end nav pull-right -->
-
+ 
 					</div><!-- end nav-collapse -->
-				</div><!-- end container -->
+ 				</div><!-- end container -->
 				
-			</div><!-- end navbar-->
+ 			</div><!-- end navbar-->
 
-
-
-			<div class="row" id="bigCallout">
-				
-			</div><!-- end bigCallout -->
-
-
-			<div class="row" id="featuresHeading">
+ 			<div class="row" id="featuresHeading">
 				<div class="col-12">
-					<h2>Browse Products</h2>
-					<p class="lead">Selete Login type from below.</p>
+					
 				</div>
 				
 			</div>
 
-
-			<div class="row" id="features">
-				<div class="col-sm-4 feture">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">System Administrator</h3>
-							
-						</div>
-						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
-						<p>System administrator login here</p>
-						<h3 class="btn btn-warning btn-block select-btn">LOGIN</h3>
-					</div>
-				</div> 
+		 
+			<div class="container" style="background-color: grey;">
+			 <form class="form-signin"  method="post" action="MySQLServlet">
+			        <h2 class="form-signin-heading">MySQL Sign In</h2>
+			        <label for="inputEmail" class="sr-only">User Name</label>
+			        <input type="email" id="inputEmail" class="form-control" placeholder="User Name" name="email" required autofocus>
+			        <label for="inputPassword" class="sr-only">Password</label>
+			        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+			        <div class="checkbox">
+			          <label>
+			            <input type="checkbox" value="remember-me"> Remember me
+			          </label>
+			        </div>
+			        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+			      </form>
 				
-				<div class="col-sm-4 feture">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">Other Medical Staff</h3>
-							
-						</div>
-						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
-						<p>Medical Staff login here</p>
-						<h3 class="btn btn-warning btn-block ots-btn">LOGIN</h3>
-					</div>
-				</div> 
-				
-				<div class="col-sm-4 feture">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">Patient Login</h3>
-							
-						</div>
-						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
-						<p>Patient login here</p>
-						<h3 class="btn btn-warning btn-block pat1-btn">LOGIN</h3>
-					</div>
-				</div> 
-				
-				<div class="col-sm-4 feture">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">Pharmacist Login</h3>
-							
-						</div>
-						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
-						<p>pharmacist login here</p>
-						<h3 class="btn btn-warning btn-block pha1-btn">LOGIN</h3>
-					</div>
-				</div> 
-				
-				<div class="col-sm-4 feture">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">GP Login</h3>
-							
-						</div>
-						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
-						<p>GP login here</p>
-						<h3 class="btn btn-warning btn-block pha1-btn">LOGIN</h3>
-					</div>
-				</div> 
-				
-				
-				<div class="col-sm-4 feture">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">MySQL Admin</h3>
-							
-						</div>
-						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
-						<p>MySQL login here</p>
-						<h3 class="btn btn-warning btn-block mysql-btn">LOGIN</h3>
-					</div>
-				</div> 
-				
-
 			</div>
-				
-				
+
 
 			<div class="row" id="moreInfo">
-				
+					
 			</div>
 
 
@@ -187,12 +122,12 @@
 
 		</div><!-- end container -->
 
-		<footer>
+ 		<footer class="footer">
 			<div class="container">
 				<div class="row">
 						<img src="asset/images/HTML5White.png" 
 					width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered">
-					<p>&copy; copyright 2016 AIT SRI Web Society</p>
+					<p>&copy; AIT A00200846</p>
 				</div>
 			</div>
 		</footer>

@@ -52,7 +52,7 @@ public class GPloginServlet extends HttpServlet {
     	  System.out.println("Yes password mached");
          HttpSession session = request.getSession();
          session.setAttribute("user", user);
-         request.getRequestDispatcher("success.jsp").forward(request, response);
+         request.getRequestDispatcher("GpLoginSuccess.jsp").forward(request, response);
       } else {
          request.getRequestDispatcher("GPLogin.jsp").forward(request, response);
          System.out.println("not mached");

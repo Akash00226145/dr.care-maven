@@ -55,7 +55,9 @@ public class GPRegisterServlet extends HttpServlet {
       GPuser gpUser = new GPuser(name,email,address,password);
       
       GPRegisterDAO.instance.saveGP(gpUser);
-	  if (gpUser != null) {
+	 
+      //return values.
+      if (gpUser != null) {
 		  System.out.println("Writting GP to DB");
 		  HttpSession session = request.getSession();
 		  session.setAttribute("user", gpUser);

@@ -100,23 +100,24 @@
 
 
 			<div class="container">
-			 <form class="form-signin"  method="post" action="OthermsLoginServlet">
-			        <h2 class="form-signin-heading"   style="font-family: cursive;">Add a GP:</h2><br>
-			        <label for="inputGPName" class="sr-only">GP Name</label>
-			        <input type="text" id="inputGPName" class="form-control" placeholder="GP Name" name="gpusername" required autofocus><br>
-			        <label for="inputEmail" class="sr-only">GP email</label>
-			        <input type="text" id="inputEmail" class="form-control" placeholder="GP email" name="gpemail" required autofocus><br>
-			        <label for="gpaddress" class="sr-only">GP Address</label>
-			        <input type="text" id="inputGPAddress" class="form-control" placeholder="GP Address" name="gpaddress" required autofocus><br>
-			        <label for="gpaddress" class="sr-only">GP PhoneNumber</label>
-			        
-			        <input type="text" id="inputGPPhone" class="form-control" placeholder="GP Phone" name="gpphone" required autofocus><br>
-			        <label for="gpaddress" class="sr-only">File Upload</label>
-			        <input type="text" id="inputFileUpload" class="form-control" placeholder="GP File" name="gpfile" required autofocus> 
-			        <button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;">Upload File</button>
+			 <form class="form-signin"  method="post" action="GPRegisterServlet">
 			       
-			        <label for="inputPassword" class="sr-only">Generate Unique Password</label>
-			        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password"> <button class="btn btn-lg btn-primary btn-block" type="submit">Generate Password</button>
+			        <h2 class="form-signin-heading"   style="font-family: cursive;">Add a GP:</h2><br>
+			        
+			        <label for="GPName" class="sr-only">GP Name</label>
+			        <input type="text" id="inputGPName" class="form-control" placeholder="GP Name" name="gpusername" required autofocus><br>
+			        
+			        <label for="gpEmail" class="sr-only">GP email</label>
+			        <input type="text" id="inputEmail" class="form-control" placeholder="GP email" name="gpemail" required autofocus><br>
+			        
+			        <label for="gpAddress" class="sr-only">GP Address</label>
+			        <input type="text" id="inputGPAddress" class="form-control" placeholder="GP Address" name="gpaddress" required autofocus><br>
+			        
+			        <label for="gpPhone" class="sr-only">GP PhoneNumber</label>  
+			        <input type="text" id="inputGPPhone" class="form-control" placeholder="GP Phone" name="gpphone" required autofocus><br>
+    			       
+			        <label for="UUIDPassword" class="sr-only">Generate Unique Password</label>
+			        <input type="password" id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword"> <button class="btn btn-lg btn-primary btn-block" type="submit">Generate UUID</button>
 			       
 			        <div class="checkbox">
 			       <!-- <label>

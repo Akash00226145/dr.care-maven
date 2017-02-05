@@ -116,8 +116,9 @@
 		<!--         <label for="gpPhone" class="sr-only">Patient PhoneNumber</label>  
 			        <input type="text" id="inputGPPhone" class="form-control" placeholder="GP Phone" name="gpphone" required autofocus><br>
     	-->	       
+    				<jsp:useBean id="uuid" class="controller.GenerateUUIDBean" />
 			        <label for="UUIDPassword" class="sr-only">Generate Unique Password</label>
-			        <input type="password" id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword"> <button class="btn btn-lg btn-primary btn-block" type="submit">Generate UUID</button>
+			        <input type="text" value='<jsp:getProperty property="UUID" name="uuid"/>' id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword" disabled> 
 			       
 			        <div class="checkbox">
 			       <!-- <label>

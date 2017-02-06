@@ -4,4 +4,24 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>GPUUIDServlet</servlet-name>
+  	<display-name>GPUUIDServlet</display-name>
+  	<description></description>
+  	<servlet-class>controller.GPUUIDServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GEUUID</servlet-name>
+  	<display-name>GEUUID</display-name>
+  	<description></description>
+  	<servlet-class>controller.GEUUID</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GPUUIDServlet</servlet-name>
+  	<url-pattern>/GPUUIDServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GEUUID</servlet-name>
+  	<url-pattern>/GEUUID</url-pattern>
+  </servlet-mapping>
 </web-app>

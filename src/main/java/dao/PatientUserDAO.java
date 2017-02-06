@@ -18,7 +18,7 @@ public enum PatientUserDAO {
     try {
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(
-    		  "jdbc:mysql://192.168.23.78:3306/UserDB", "root", "");
+    		  "jdbc:mysql://localhost:3306/UserDB", "root", "Poiu0987");
     } catch (Exception e) {
       e.printStackTrace();
     }

@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -12,6 +14,8 @@
 		<!-- Bootstrap CSS -->
 		<link href="asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link href="asset/includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+		<link href="asset/includes/css/signin.css" rel="stylesheet">
+		<link href="asset/includes/css/sticky-footer.css" rel="stylesheet">
 		
 		<!-- Custom CSS -->
 		<link href="asset/includes/css/styles.css" rel="stylesheet">
@@ -25,7 +29,7 @@
 		<div class="container" id="main">
 
 			<div class="navbar navbar-fixed-top">
-				<div class="container">
+				<div class="container" style="padding: 0;">
 					
 					<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
 						<span class="icon-bar"></span>
@@ -37,20 +41,26 @@
 
 					<div class="nav-collapse collapse navbar-responsive-collapse">
 						<ul class="nav navbar-nav">
-							<li class="active">
-								<a href="#">Home</a>
+							<li>
+								<a href="index.jsp">Home</a>
 							</li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
 										<li>
-											<a href="#">Web Design</a>
+											<a href="adminlogin.jsp">Admin Login</a>
 										</li>
 										<li>
-											<a href="#">About Us</a>
+											<a href="#">GP Login</a>
 										</li>
 										<li>
-											<a href="#">Contact Us</a>
+											<a href="#">Pharmacist Login</a>
+										</li>
+										<li>
+											<a href="OtherStaffLogin.jsp">Other Staff Login</a>
+										</li>
+										<li>
+											<a href="#">Patient Login</a>
 										</li>
 										<li class="divider"></li>
 
@@ -59,20 +69,20 @@
 											<a href="#">About Us</a>
 										</li>
 										<li>
-											<a href="#">Shocial Media</a>
+											<a href="#">Social Media</a>
 										</li>
 									</ul>
 							</li>
 						</ul>
 
-						<form class="navbar-form pull-left" >
+						<form class="navbar-form pull-left"  >
 							<input type="text" class="form-control" placeholder="Search product..." id="searchInput">
 							<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 						</form><!-- end navbar-form -->
 						
 						<ul class="nav navbar-nav pull-right">
 							<li>
-								<a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a>
+								<a href="#"><span class="glyphicon glyphicon-user"></span>My Account</a>
 							</li>
 						</ul><!-- end nav pull-right -->
 
@@ -81,103 +91,48 @@
 				
 			</div><!-- end navbar-->
 
-
-
-			<div class="row" id="bigCallout">
-				
-			</div><!-- end bigCallout -->
-
-
 			<div class="row" id="featuresHeading">
 				<div class="col-12">
-					<h2>Browse Products</h2>
-					<p class="lead">Selete Login type from below.</p>
+					
 				</div>
 				
 			</div>
 
 
-			<div class="row" id="features">
-				<div class="col-sm-4 feture">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">System Administrator</h3>
-							
-						</div>
-						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
-						<p>System administrator login here</p>
-						<h3 class="btn btn-warning btn-block select-btn">LOGIN</h3>
-					</div>
-				</div> 
+			<div class="container">
+			 <form class="form-signin"  method="post" action="PatientListServlet">
+			       
+			        <h2 class="form-signin-heading"   style="font-family: cursive;">Add a Patient:</h2><br>
+			        
+			<!--         <label for="GPName" class="sr-only">Patient Name</label>
+			        <input type="text" id="inputGPName" class="form-control" placeholder="GP Name" name="gpusername" required autofocus><br>
+			  -->      
+			        <label for="gpEmail" class="sr-only">Patient email</label>
+			        <input type="text" id="inputEmail" class="form-control" placeholder="GP email" name="gpemail" required autofocus><br>
+			        
+			        <label for="gpAddress" class="sr-only">Patient Address</label>
+			        <input type="text" id="inputGPAddress" class="form-control" placeholder="GP Address" name="gpaddress" required autofocus><br>
+			        
+		<!--         <label for="gpPhone" class="sr-only">Patient PhoneNumber</label>  
+			        <input type="text" id="inputGPPhone" class="form-control" placeholder="GP Phone" name="gpphone" required autofocus><br>
+    	-->	       
+    				<jsp:useBean id="uuid" class="controller.GenerateUUIDBean" />
+			        <label for="UUIDPassword" class="sr-only">Generate Unique Password</label>
+			        <input type="text" value='<jsp:getProperty property="UUID" name="uuid"/>' id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword" disabled> 
+			       
+			        <div class="checkbox">
+			       <!-- <label>
+			            <input type="checkbox" value="remember-me"> Remember me
+			          </label> -->
+			        </div>
+			        <button class="btn btn-lg btn-primary btn-block" type="submit">Create Patient</button>
+			      </form>
 				
-				<div class="col-sm-4 feture">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">Other Medical Staff</h3>
-							
-						</div>
-						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
-						<p>Medical Staff login here</p>
-						<h3 class="btn btn-warning btn-block ots-btn">LOGIN</h3>
-					</div>
-				</div> 
-				
-				<div class="col-sm-4 feture">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">Patient Login</h3>
-							
-						</div>
-						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
-						<p>Patient login here</p>
-						<h3 class="btn btn-warning btn-block pat1-btn">LOGIN</h3>
-					</div>
-				</div> 
-				
-				<div class="col-sm-4 feture">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">Pharmacist Login</h3>
-							
-						</div>
-						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
-						<p>pharmacist login here</p>
-						<h3 class="btn btn-warning btn-block pha1-btn">LOGIN</h3>
-					</div>
-				</div> 
-				
-				<div class="col-sm-4 feture">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">GP Login</h3>
-							
-						</div>
-						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
-						<p>GP login here</p>
-						<h3 class="btn btn-warning btn-block pha1-btn">LOGIN</h3>
-					</div>
-				</div> 
-				
-				
-				<div class="col-sm-4 feture">
-					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">MySQL Admin</h3>
-							
-						</div>
-						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
-						<p>MySQL login here</p>
-						<h3 class="btn btn-warning btn-block mysql-btn">LOGIN</h3>
-					</div>
-				</div> 
-				
-
 			</div>
-				
-				
+
 
 			<div class="row" id="moreInfo">
-				
+					
 			</div>
 
 
@@ -187,7 +142,7 @@
 
 		</div><!-- end container -->
 
-		<footer>
+		<footer class="footer">
 			<div class="container">
 				<div class="row">
 						<img src="asset/images/HTML5White.png" 
@@ -213,4 +168,3 @@
 	<script src="asset/includes/js/script.js"></script>
 	
 	</body>
-</html>

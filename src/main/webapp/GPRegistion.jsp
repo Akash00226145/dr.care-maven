@@ -120,7 +120,6 @@
     			       
 			        <label for="UUIDPassword" class="sr-only">Generate Unique Password</label>
 			        <input type="password" id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword"> 
-			        <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Generate UUID</button> -->
 			       
 			       
 			        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Upload">Create GP</button><br><br>

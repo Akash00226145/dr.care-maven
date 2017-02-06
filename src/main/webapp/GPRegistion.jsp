@@ -100,7 +100,7 @@
 
 
 			<div class="container">
-			 <form class="form-signin"  method="post" action="GPRegisterServlet">
+			 <form class="form-signin"  method="post" action="GPRegisterServlet" enctype="multipart/form-data" >
 			       
 			        <h2 class="form-signin-heading"   style="font-family: cursive;">Add a GP:</h2><br>
 			        
@@ -115,16 +115,15 @@
 			        
 			        <label for="gpPhone" class="sr-only">GP PhoneNumber</label>  
 			        <input type="text" id="inputGPPhone" class="form-control" placeholder="GP Phone" name="gpphone" required autofocus><br>
+    			    
+    			    <input type="file" name="fileName"><br>
     			       
 			        <label for="UUIDPassword" class="sr-only">Generate Unique Password</label>
-			        <input type="password" id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword"> <button class="btn btn-lg btn-primary btn-block" type="submit">Generate UUID</button>
+			        <input type="password" id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword"> 
+			        <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Generate UUID</button> -->
 			       
-			        <div class="checkbox">
-			       <!-- <label>
-			            <input type="checkbox" value="remember-me"> Remember me
-			          </label> -->
-			        </div>
-			        <button class="btn btn-lg btn-primary btn-block" type="submit">Create GP</button>
+			       
+			        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Upload">Create GP</button><br><br>
 			      </form>
 				
 			</div>

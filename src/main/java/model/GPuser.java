@@ -6,6 +6,15 @@ public class GPuser {
 	private String email;
 	private String address;
 	private int phone;
+	private String fileName;
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
 	private String password;
 
 	public GPuser(int id, String name, String email, String address, int phone, String password) {
@@ -17,10 +26,12 @@ public class GPuser {
 		this.password = password;		
 	}
 	
-	public GPuser(String name, String email, String address, String password) {
+	public GPuser(String name, String email, String address, int phone,String fileName, String password) {
 		this.name = name;
 		this.email = email;
 		this.address = address;
+		this.phone = phone;
+		this.fileName = fileName;
 		this.password = password;	
 	}
 

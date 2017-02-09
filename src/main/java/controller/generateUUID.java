@@ -1,11 +1,7 @@
 package controller;
 
-import static org.junit.Assert.*;
-
 import java.nio.ByteBuffer;
 import java.util.UUID;
-
-import org.junit.Test;
 
 public class generateUUID {
 	public static String shortUUID() {
@@ -24,11 +20,11 @@ public class generateUUID {
 		
 	}
 	
-	@Test
+	/*@Test
 	public void test(){
 		String a = shortUUID();
 	  	int result=a.length();
 		assertTrue(result>=12);
-	   }
+	   }*/
 	
 }

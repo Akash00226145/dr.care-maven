@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import dao.AdminUserDAO;
 import junit.framework.TestCase;
+import model.AdminUser;
 
 
 public class AdminUserDAOTest extends TestCase {
@@ -30,5 +31,18 @@ public class AdminUserDAOTest extends TestCase {
 		
 		
 	}
+	
+	@Test
+	public void testCheckUser() throws SQLException {
+		AdminUser user = null;
+		 try {
+			  user = AdminUserDAO.checkLogin("akash@ait.ie", "akash12345");
+			  assertNotNull(user);
+	          } catch (Exception e) {
+
+	        	 assertSame("Invild value", e.getMessage());
+	    
+	 }
+	 }
 
 }

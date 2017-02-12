@@ -12,13 +12,13 @@ import model.PatientUser;
 public enum PatientUserDAO {
   instance;
 
-  public Connection getConnection() {
+  public static Connection getConnection() {
 
     Connection connection = null;
     try {
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(
-    		  "jdbc:mysql://localhost:3306/UserDB", "root", "Poiu0987");
+    		  "jdbc:mysql://34.250.167.112:3306/UserDB", "root", "root");
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -40,7 +40,7 @@ public enum PatientUserDAO {
     }
   }
 
-  public PatientUser checkLogin(String email, String password) {
+  public static PatientUser checkLogin(String email, String password) {
     Connection connection = getConnection();
     PatientUser user = null ;
 

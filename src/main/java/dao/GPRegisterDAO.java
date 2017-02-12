@@ -16,7 +16,7 @@ public enum GPRegisterDAO {
     try {
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(
-    		  "jdbc:mysql://localhost:3306/UserDB", "root", "root");
+    		  "jdbc:mysql://34.250.167.112:3306/UserDB", "root", "root");
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -44,10 +44,10 @@ public enum GPRegisterDAO {
     return 1;
   }
 
+  
  public GPuser checkLogin(String email, String password) {
     Connection connection = getConnection();
     GPuser gpuser = null ;
-
     try {
       PreparedStatement psmt = connection
           .prepareStatement("SELECT * FROM GPR WHERE EMAIL = ? AND PASSWORD = ?");
@@ -63,25 +63,5 @@ public enum GPRegisterDAO {
     }
     return gpuser ;
   }
-  
- /* public int insertGP(String name, String email, String address, int phone, String password){
-	  Connection connection = getConnection();
-	  GPuser gpuser = null ;
 
-	  try {
-	      PreparedStatement psmt = connection.prepareStatement("INSERT INTO GP name, email, address, "
-	        		  											+ "phone, password) "
-	        		  											+ "VALUES (?,?,?,?,?)");
-
-	      psmt.setString(1, (gpuser.getName()));
-	      psmt.setString(2, (gpuser.getEmail()));
-	      psmt.setString(3, (gpuser.getAddress()));
-	      psmt.setString(4, Integer.toString(gpuser.getPhone()));
-	      psmt.setString(5, (gpuser.getPassword()));
-	  } catch (SQLException e) {
-	      e.printStackTrace();
-	      return -1;
-	  }
-	  return 1;
-  }*/
 }

@@ -16,6 +16,18 @@
   	<description></description>
   	<servlet-class>controller.GEUUID</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>PrescriptionServlet</servlet-name>
+  	<display-name>PrescriptionServlet</display-name>
+  	<description></description>
+  	<servlet-class>controller.PrescriptionServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PatientPrescripServlet</servlet-name>
+  	<display-name>PatientPrescripServlet</display-name>
+  	<description></description>
+  	<servlet-class>controller.PatientPrescripServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>GPUUIDServlet</servlet-name>
   	<url-pattern>/GPUUIDServlet</url-pattern>
@@ -23,5 +35,13 @@
   <servlet-mapping>
   	<servlet-name>GEUUID</servlet-name>
   	<url-pattern>/GEUUID</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PrescriptionServlet</servlet-name>
+  	<url-pattern>/PrescriptionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PatientPrescripServlet</servlet-name>
+  	<url-pattern>/PatientPrescripServlet</url-pattern>
   </servlet-mapping>
 </web-app>

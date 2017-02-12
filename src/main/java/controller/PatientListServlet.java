@@ -36,9 +36,10 @@ public class PatientListServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		List<PatientUser> PatientList = PharmacistDAO.instance.list();
-		request.setAttribute("PatientList", PatientList);
-		request.getRequestDispatcher("PharmacistSuccess.jsp").forward(request, response);
+	    String p_id = request.getParameter("id");
+	    HttpSession session = request.getSession();
+	    session.setAttribute("p_id",Integer.parseInt(p_id));
+	    request.getRequestDispatcher("Prescription.jsp").forward(request, response);
 	}
 
 	/**

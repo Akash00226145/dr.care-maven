@@ -7,9 +7,9 @@ import java.sql.SQLException;
 
 import org.junit.Test;
 
-
 import dao.MySQLDAO;
 import junit.framework.TestCase;
+import model.MySQLUser;
 
 public class SQL_Admin_Test_DAO extends TestCase 
 {
@@ -24,13 +24,29 @@ public class SQL_Admin_Test_DAO extends TestCase
 			con = MySQLDAO.getConnection();
 			assertNotNull(con);
 			
-		} catch (Exception e)
+		} 
+			catch (Exception e)
 		{
-			// TODO: handle exception
 			fail("No Exception expected .....");
 			e.printStackTrace();
-		}		
-		
+		}			
 	}
+	
+	@Test
+	public void testCheckUser() throws SQLException
 
+	{
+		MySQLUser user = null;
+		 try
+		 {
+			  user = MySQLDAO.checkLogin("czata1@gmail.com", "MSc2017");
+			  assertNotNull(user);
+	     } 
+		 
+		 catch (Exception e)
+		 {
+			 assertSame("Invild value", e.getMessage());
+	    
+	     }
+	}	
 }

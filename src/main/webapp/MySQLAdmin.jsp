@@ -9,7 +9,7 @@
 		<meta name="description" content="">
 		
 		<!-- Mobile viewport optimized -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 		
 		<!-- Bootstrap CSS -->
 		<link href="asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -48,7 +48,7 @@
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
 										<li>
-											<a href="#">Web Design</a>
+											<a href="#">Web Design></a>
 										</li>
 										<li>
 											<a href="#">About Us</a>

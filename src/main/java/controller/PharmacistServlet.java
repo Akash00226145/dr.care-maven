@@ -35,11 +35,16 @@ public class PharmacistServlet extends HttpServlet {
     *      response)
     */
    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-         throws ServletException, IOException {
-      // TOD
+		    throws ServletException, IOException
+		  {
+	   List<PatientUser> PatientList = PharmacistDAO.instance.list();
+
+	    request.setAttribute("PatientList",PatientList);
 	   
-	  
-   }
+		    request.getRequestDispatcher("PharmacistSuccess.jsp").forward(request, 
+		      response);
+		  }
+		  
 
    /**
     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
@@ -55,7 +60,8 @@ public class PharmacistServlet extends HttpServlet {
     	  System.out.println("Yes password mached");
          HttpSession session = request.getSession();
          session.setAttribute("phar", phar);
-         request.getRequestDispatcher("PharmacistSuccess.jsp").forward(request, response);
+         System.out.println("sdad");
+         this.doGet(request, response);
       } else {
          request.getRequestDispatcher("index.jsp").forward(request, response);
          System.out.println("not mached");

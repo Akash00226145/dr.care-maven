@@ -100,34 +100,16 @@
 
 
 			<div class="container">
-			 <form class="form-signin"  method="post" action="GPRegisterServlet" enctype="multipart/form-data" >
-			       
-			        <h2 class="form-signin-heading"   style="font-family: cursive;">Add a GP:</h2><br>
+			 <form class="form-signin"  method="post" action="PrescriptionServlet">
+			        <h2 class="form-signin-heading">Add Prescription</h2>
+			    
+			        <label for="method" class="sr-only">Taken method</label>
+			        <input type="text" id="method" class="form-control" placeholder="method" name="method" required>
+			        <label for="medicine" class="sr-only">Taken medicine</label>
+			        <input type="text" id="medicine" class="form-control" placeholder="medicine" name="medicine" required>
 			        
-			        <label for="GPName" class="sr-only">GP Name</label>
-			        <input type="text" id="inputGPName" class="form-control" placeholder="GP Name" name="gpusername" required autofocus><br>
 			        
-			        <label for="gpEmail" class="sr-only">GP email</label>
-			        <input type="text" id="inputEmail" class="form-control" placeholder="GP email" name="gpemail" required autofocus><br>
-			        
-			        <label for="gpAddress" class="sr-only">GP Address</label>
-			        <input type="text" id="inputGPAddress" class="form-control" placeholder="GP Address" name="gpaddress" required autofocus><br>
-			        
-			        <label for="gpPhone" class="sr-only">GP PhoneNumber</label>  
-			        <input type="text" id="inputGPPhone" class="form-control" placeholder="GP Phone" name="gpphone" required autofocus><br>
-    			    
-    			    <input type="file" name="fileName"><br>
-    			       
-			        <jsp:useBean id="uuid" class="controller.GenerateUUIDBean" />
-			        <label for="UUIDPassword" class="sr-only">Generate Unique Password</label>
-<<<<<<< HEAD
-			        <input type="text" value='<jsp:getProperty property="UUID" name="uuid"/>' id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword" disabled><br> 
-			       
-=======
-			        <input type="text" value='<jsp:getProperty property="UUID" name="uuid"/>' id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword"> 
->>>>>>> 3098368690a8edd2f934dd51168f65dc593fa448
-			       
-			        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Upload">Create GP</button><br><br>
+			        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
 			      </form>
 				
 			</div>
@@ -170,3 +152,4 @@
 	<script src="asset/includes/js/script.js"></script>
 	
 	</body>
+</html>

@@ -12,13 +12,13 @@ import model.OthermsUser;
 public enum OTHERMSDAO {
   instance;
 
-  public Connection getConnection() {
+  public static Connection getConnection() {
 
     Connection connection = null;
     try {
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(
-    		  "jdbc:mysql://192.168.101.130:3306/UserDB", "root", "");
+    		  "jdbc:mysql://34.250.167.112:3306/UserDB", "root", "root");
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -27,7 +27,7 @@ public enum OTHERMSDAO {
 
 
 
-  public OthermsUser checkLogin(String username, String password) {
+  public static OthermsUser checkLogin(String username, String password) {
     Connection connection = getConnection();
     OthermsUser user = null ;
 

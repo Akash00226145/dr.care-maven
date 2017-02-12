@@ -95,6 +95,7 @@ public class GPRegisterServlet extends HttpServlet {
 	  String address = request.getParameter("gpaddress");
 	  int phone = Integer.parseInt(request.getParameter("gpphone"));
       String password = request.getParameter("UUIDpassword");
+      System.out.println("password : "+password);
       GPuser gpUser = new GPuser(name,email,address,phone,fileName,password);
       
       GPRegisterDAO.instance.saveGP(gpUser);

@@ -14,7 +14,7 @@ import model.MySQLUser;
 public class SQL_Admin_Test_DAO extends TestCase 
 {
 		
-	@Test
+	/*@Test
 	public void testMockDB() throws SQLException
 	{
 		
@@ -48,5 +48,5 @@ public class SQL_Admin_Test_DAO extends TestCase
 			 assertSame("Invild value", e.getMessage());
 	    
 	     }
-	}	
+	}	*/
 }

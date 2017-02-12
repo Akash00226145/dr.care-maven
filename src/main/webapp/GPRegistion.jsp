@@ -118,8 +118,9 @@
     			    
     			    <input type="file" name="fileName"><br>
     			       
+			        <jsp:useBean id="uuid" class="controller.GenerateUUIDBean" />
 			        <label for="UUIDPassword" class="sr-only">Generate Unique Password</label>
-			        <input type="password" id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword"> 
+			        <input type="text" value='<jsp:getProperty property="UUID" name="uuid"/>' id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword" disabled> 
 			       
 			       
 			        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Upload">Create GP</button><br><br>

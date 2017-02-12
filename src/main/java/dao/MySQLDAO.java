@@ -1,4 +1,4 @@
-package dao;
+ package dao;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -16,22 +16,22 @@ public enum MySQLDAO {
 	
 	 instance;
 		
-		String x ;
+		static String x ;
 		
-		public String getIP()
+		public static String getIP()
 		
 		{
-			 try {
-				  
-			      BufferedReader br = new BufferedReader(new FileReader("sql_ip.txt"));
-			      try {
-			          
-			          while ( (x = br.readLine()) != null ) 
-			          {
-			        	  br.close();
-			        	  return x;			        	  
-			          }
-			      }
+			 try
+			 {				  
+				 BufferedReader br = new BufferedReader(new FileReader("sql_ip.txt"));
+			     try 
+			     {			          
+			    	 while ( (x = br.readLine()) != null ) 
+			         {
+			    		 br.close();
+			    		 return x;			        	  
+			         }
+			     }
 			      catch (IOException e) {
 			          e.printStackTrace();
 			      }
@@ -46,24 +46,24 @@ public enum MySQLDAO {
 		}
 	
 				
-		 public Connection getConnection() 
+		 public static Connection getConnection() 
 		 
 		 {
 			  
-    Connection connection = null;	
-    try {
-    	
-      Class.forName("com.mysql.jdbc.Driver");
-      System.out.println(getIP());
-      connection = DriverManager.getConnection(
-    		  "jdbc:mysql://"+(getIP())+"/doctors_care_database_test", "DrCare_Admin", "MSc_2017");
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-    return connection;
-  }
-
- 
+			 Connection connection = null;	
+			 try 
+			 	{			    	
+				 	Class.forName("com.mysql.jdbc.Driver");			      
+				 	connection = DriverManager.getConnection("jdbc:mysql://"+(getIP())+"/doctors_care_database_test", "DrCare_Admin", "MSc_2017");
+			    } 
+			    catch (Exception e)
+			    {
+			    	e.printStackTrace();
+			    }
+		    return connection;
+		  }
+		
+		 
 
 /*
 public void save(MySQLUser SQL_user) {
@@ -85,7 +85,7 @@ public void save(MySQLUser SQL_user) {
 */
 
 
-public MySQLUser checkLogin(String email, String password) {
+public static MySQLUser checkLogin(String email, String password) {
     Connection connection = getConnection();
     MySQLUser SQL_user = null ;
 

@@ -10,12 +10,12 @@ public class GPuser {
 	public String getFileName() {
 		return fileName;
 	}
+	private String password;
 
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
 
-	private String password;
 
 	public GPuser(int id, String name, String email, String address, int phone, String password) {
 		this.id = id;

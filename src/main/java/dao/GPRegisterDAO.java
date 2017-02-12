@@ -44,10 +44,10 @@ public enum GPRegisterDAO {
     return 1;
   }
 
+  
  public GPuser checkLogin(String email, String password) {
     Connection connection = getConnection();
     GPuser gpuser = null ;
-
     try {
       PreparedStatement psmt = connection
           .prepareStatement("SELECT * FROM GPR WHERE EMAIL = ? AND PASSWORD = ?");

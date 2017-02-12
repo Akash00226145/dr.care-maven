@@ -1,4 +1,4 @@
-package dao;
+ package dao;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -16,9 +16,9 @@ public enum MySQLDAO {
 	
 	 instance;
 		
-		String x ;
+		static String x ;
 		
-		public String getIP()
+		public static String getIP()
 		
 		{
 			 try {
@@ -46,7 +46,7 @@ public enum MySQLDAO {
 		}
 	
 				
-		 public Connection getConnection() 
+		 public static Connection getConnection() 
 		 
 		 {
 			  
@@ -54,7 +54,7 @@ public enum MySQLDAO {
     try {
     	
       Class.forName("com.mysql.jdbc.Driver");
-      System.out.println(getIP());
+      
       connection = DriverManager.getConnection(
     		  "jdbc:mysql://"+(getIP())+"/doctors_care_database_test", "DrCare_Admin", "MSc_2017");
     } catch (Exception e) {

@@ -32,7 +32,7 @@ public enum PharmacistDAO {
 
     try {
       PreparedStatement psmt = connection
-          .prepareStatement("INSERT INTO Pharmacist (username, password, address) VALUES (?, ?, ?)");
+          .prepareStatement("INSERT INTO pharmacist (username, password, address) VALUES (?, ?, ?)");
       psmt.setString(1, phar.getUsername());
       psmt.setString(2, phar.getPassword());
       psmt.setString(3, phar.getAddress());

@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 import org.junit.Test;
 
+import dao.AdminUserDAO;
 import dao.PharmacistDAO;
 import junit.framework.TestCase;
 import model.Pharmacist;
@@ -28,22 +29,25 @@ public class PharmacistDAOTest extends TestCase {
 			e.printStackTrace();
 		}
 	}
+	
 	@Test
 		public void testSave() throws SQLException{
 			
-			PharmacistDAO a=PharmacistDAO.instance;
+		
 			Pharmacist phar=new Pharmacist("Rachel","asd","Athlone");
-			try {
+			
+			 try {
+				  phar = PharmacistDAO.instance.save(phar);
+				  assertNotNull(phar);
+		          } catch (Exception e) {
+
+		        	 assertSame("Invild value", e.getMessage());
+		    
+		 }
+			
+	}
 				
-				assertNotNull(a.save(phar));
-				
-			} catch (Exception e) {
-				// TODO: handle exception
-				fail("No Exception expected .....");
-				e.printStackTrace();
-			}}
-				
-			@Test
+			/*@Test
 			public void testLoginTrue() throws SQLException{
 				
 				PharmacistDAO a=PharmacistDAO.instance;
@@ -57,8 +61,8 @@ public class PharmacistDAOTest extends TestCase {
 					fail("No Exception expected .....");
 					e.printStackTrace();
 				}	
-	}
-			@Test
+	}*/
+		/*	@Test
 			public void testLoginFalse() throws SQLException{
 				
 				PharmacistDAO a=PharmacistDAO.instance;
@@ -72,8 +76,8 @@ public class PharmacistDAOTest extends TestCase {
 					fail("No Exception expected .....");
 					e.printStackTrace();
 				}	
-	}
-			@Test
+	}*/
+			/*@Test
 			public void testPatientList() throws SQLException{
 				
 				PharmacistDAO a=PharmacistDAO.instance;
@@ -87,8 +91,9 @@ public class PharmacistDAOTest extends TestCase {
 					fail("No Exception expected .....");
 					e.printStackTrace();
 				}	
-			}
-				@Test
+			}*/
+	
+		/*		@Test
 				public void testPrescription() throws SQLException{
 					
 					PharmacistDAO a=PharmacistDAO.instance;
@@ -102,5 +107,5 @@ public class PharmacistDAOTest extends TestCase {
 						fail("No Exception expected .....");
 						e.printStackTrace();
 					}	
-	}
+	}*/
 }

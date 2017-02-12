@@ -4,12 +4,14 @@ package test_drcare.dao;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.junit.Test;
 
 import dao.AdminUserDAO;
 import dao.PharmacistDAO;
 import junit.framework.TestCase;
+import model.PatientUser;
 import model.Pharmacist;
 
 public class PharmacistDAOTest extends TestCase {
@@ -29,6 +31,7 @@ public class PharmacistDAOTest extends TestCase {
 			e.printStackTrace();
 		}
 	}
+	/*
 	
 	@Test
 		public void testSave() throws SQLException{
@@ -45,67 +48,70 @@ public class PharmacistDAOTest extends TestCase {
 		    
 		 }
 			
-	}
-				
-			/*@Test
+	}*/
+			
+			@Test
 			public void testLoginTrue() throws SQLException{
 				
-				PharmacistDAO a=PharmacistDAO.instance;
+				Pharmacist phar=null;
 				
 				try {
 					
-					assertNotNull(a.checkLogin("abc", "12345"));
+					phar=PharmacistDAO.instance.checkLogin("abc", "12345");
+					  assertNotNull(phar);
 					
 				} catch (Exception e) {
 					// TODO: handle exception
 					fail("No Exception expected .....");
 					e.printStackTrace();
 				}	
-	}*/
-		/*	@Test
+	}
+			/*
+		@Test
 			public void testLoginFalse() throws SQLException{
 				
-				PharmacistDAO a=PharmacistDAO.instance;
+			Pharmacist phar=null;
+			
+			try {
 				
-				try {
-					
-					assertNotNull(a.checkLogin("Emma", "23123"));
-					
-				} catch (Exception e) {
-					// TODO: handle exception
-					fail("No Exception expected .....");
-					e.printStackTrace();
-				}	
+				phar=PharmacistDAO.instance.checkLogin("abc", "345");
+				  assertNotNull(phar);
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+				fail("No Exception expected .....");
+				e.printStackTrace();
+			}	
 	}*/
-			/*@Test
+			@Test
 			public void testPatientList() throws SQLException{
 				
-				PharmacistDAO a=PharmacistDAO.instance;
 				
 				try {
-					
-					assertNotNull(a.list());
+					PharmacistDAO a=PharmacistDAO.instance;
+					List<PatientUser> list=a.list();
+					assertNotNull(list);
 					
 				} catch (Exception e) {
 					// TODO: handle exception
 					fail("No Exception expected .....");
 					e.printStackTrace();
 				}	
-			}*/
+			}
 	
-		/*		@Test
+			@Test
 				public void testPrescription() throws SQLException{
 					
 					PharmacistDAO a=PharmacistDAO.instance;
-					
+					int b=a.PrescriptionSave("as", "asd", 8);
 					try {
 						
-						assertEquals(1,a.PrescriptionSave("as", "asd", 8));
+						assertEquals(1,b);
 						
 					} catch (Exception e) {
 						// TODO: handle exception
 						fail("No Exception expected .....");
 						e.printStackTrace();
 					}	
-	}*/
+	}
 }

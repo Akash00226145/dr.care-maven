@@ -26,7 +26,7 @@ public enum PharmacistDAO {
     }
     return connection;
   }
-
+/*
   public Pharmacist save(Pharmacist phar) {
     Connection connection = getConnection();
 
@@ -49,7 +49,7 @@ public enum PharmacistDAO {
     }
     return phar;
   }
-  
+  */
   public int PrescriptionSave(String method,String medicine,int id) {
 	    Connection connection = getConnection();
 

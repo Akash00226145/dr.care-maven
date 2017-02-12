@@ -20,6 +20,11 @@ public Pharmacist(String username, String password, String address) {
 	this.password = password;
 	this.address = address;
 }
+public Pharmacist(String username, String password) {
+	this.username = username;
+	this.password = password;
+	// TODO Auto-generated constructor stub
+}
 public int getId() {
 	return id;
 }

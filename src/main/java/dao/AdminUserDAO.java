@@ -9,8 +9,7 @@ import java.sql.Statement;
 
 import model.AdminUser;
 
-public enum AdminUserDAO {
-  instance;
+public class AdminUserDAO {
 
   public static Connection getConnection() {
 
@@ -18,7 +17,7 @@ public enum AdminUserDAO {
     try {
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(
-    		  "jdbc:mysql://34.249.220.35:3306/UserDB", "root", "root");
+    		  "jdbc:mysql://34.250.167.112:3306/UserDB", "root", "root");
     } catch (Exception e) {
       e.printStackTrace();
     }

@@ -45,7 +45,7 @@ public class AdminLoginServlet extends HttpServlet {
      
 	   String name = request.getParameter("email");
       String password = request.getParameter("password");
-      AdminUser user = AdminUserDAO.instance.checkLogin(name, password);
+      AdminUser user = AdminUserDAO.checkLogin(name, password);
       if (user != null) {
     	  System.out.println("Yes password mached");
          HttpSession session = request.getSession();

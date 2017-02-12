@@ -13,6 +13,13 @@ public Pharmacist(int id, String username, String password, String address) {
 	this.password = password;
 	this.address = address;
 }
+public Pharmacist(String username, String password, String address) {
+	super();
+	
+	this.username = username;
+	this.password = password;
+	this.address = address;
+}
 public int getId() {
 	return id;
 }

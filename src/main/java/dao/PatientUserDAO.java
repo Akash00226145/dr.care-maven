@@ -12,7 +12,7 @@ import model.PatientUser;
 public enum PatientUserDAO {
   instance;
 
-  public Connection getConnection() {
+  public static Connection getConnection() {
 
     Connection connection = null;
     try {
@@ -40,7 +40,7 @@ public enum PatientUserDAO {
     }
   }
 
-  public PatientUser checkLogin(String email, String password) {
+  public static PatientUser checkLogin(String email, String password) {
     Connection connection = getConnection();
     PatientUser user = null ;
 

@@ -63,25 +63,5 @@ public enum GPRegisterDAO {
     }
     return gpuser ;
   }
-  
- /* public int insertGP(String name, String email, String address, int phone, String password){
-	  Connection connection = getConnection();
-	  GPuser gpuser = null ;
 
-	  try {
-	      PreparedStatement psmt = connection.prepareStatement("INSERT INTO GP name, email, address, "
-	        		  											+ "phone, password) "
-	        		  											+ "VALUES (?,?,?,?,?)");
-
-	      psmt.setString(1, (gpuser.getName()));
-	      psmt.setString(2, (gpuser.getEmail()));
-	      psmt.setString(3, (gpuser.getAddress()));
-	      psmt.setString(4, Integer.toString(gpuser.getPhone()));
-	      psmt.setString(5, (gpuser.getPassword()));
-	  } catch (SQLException e) {
-	      e.printStackTrace();
-	      return -1;
-	  }
-	  return 1;
-  }*/
 }

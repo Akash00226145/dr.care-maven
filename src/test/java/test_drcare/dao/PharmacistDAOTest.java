@@ -8,7 +8,6 @@ import java.util.List;
 
 import org.junit.Test;
 
-import dao.AdminUserDAO;
 import dao.PharmacistDAO;
 import junit.framework.TestCase;
 import model.PatientUser;

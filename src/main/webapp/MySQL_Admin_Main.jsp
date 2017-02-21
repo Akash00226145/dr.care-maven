@@ -97,6 +97,7 @@
 							<li>
 								<a href="index.jsp">Home</a>
 							</li>
+							
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
@@ -155,6 +156,7 @@
 			<div class="container">
 			
 			 <form class="form-signin"  method="post" action="OthermsLoginServlet">
+			
 			 
 			       
 			            <h2 class="form-signin-heading"   style="font-family: cursive;">MySQL DataBase</h2>
@@ -163,24 +165,36 @@
   				
   				
   				</br>
-			      
-                  <div class="dropdown">
- 					 <button onclick="myFunction()" class="dropbtn">DataBase Created</button>
- 						 <div id="myDropdown" class="dropdown-content">
-   							 <a href="#">Create DataBase</a>
-   								 <a href="#">Backup</a>
-   									 <a href="#">Delete</a>
-  				</div>
   				
+  				 <li class="dropdown">
+								
+									<button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;"   data-toggle="dropdown">DataBase Recreated  <strong class="caret"></strong></button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">Create DataBase</a>
+										</li>
+										<li>
+											<a href="#">Backup</a>
+										</li>
+										<li>
+											<a href="#">Delete</a>
+										</li>
+										
+									</ul>
+							</li>
+			      
+                
   				<br>
   				
   				
   				</br>
- 					  <button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;">Display DataBase</button>
+  				 <li class="dropdown">
+  				 
+ 					   <button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;">Display Table of DataBase</button>
 			       
-			         <button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;">Display Users Name</button>
+			         <button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;">Display List of Users</button>
 			       
-  
+  </li>
   
 </div>
 			       

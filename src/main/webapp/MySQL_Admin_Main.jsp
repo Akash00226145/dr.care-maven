@@ -168,34 +168,35 @@
   				
   				 <li class="dropdown">
 								
-									<button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;"   data-toggle="dropdown">DataBase Recreated  <strong class="caret"></strong></button>
+								<button class="btn btn-lg btn-primary btn-block" class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;"   data-toggle="dropdown">DataBase Recreated  <strong class="caret"></strong></button>
+								
+								
 									<ul class="dropdown-menu">
 										<li>
-											<a href="#">Create DataBase</a>
+											<a href="MySQL_CreateDataBase.jsp">Create DataBase</a>
 										</li>
 										<li>
-											<a href="#">Backup</a>
+											<a href="MySQL_Backup.jsp">Backup</a>
 										</li>
 										<li>
-											<a href="#">Delete</a>
+											<a href="MySQL_Delete.jsp">Delete</a>
 										</li>
 										
 									</ul>
 							</li>
-			      
-                
-  				<br>
-  				
-  				
+							
+			      <br>
   				</br>
-  				 <li class="dropdown">
+                  				
+  				 <input type=button onClick="location.href='MySQL_Display_DataBase_Table.jsp'" value='Display Table of DataBase' class="btn btn-lg btn-primary btn-block" >
   				 
- 					   <button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;">Display Table of DataBase</button>
-			       
-			         <button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;">Display List of Users</button>
-			       
-  </li>
-  
+  				 <br>
+  				</br>
+  				  				
+  				 <input type=button onClick="location.href='MySQL_DataBase_List.jsp'" value='Display List of Users' class="btn btn-lg btn-primary btn-block" >
+  				 
+ 				        
+			      	  
 </div>
 			       
 			       

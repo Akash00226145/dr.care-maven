@@ -7,8 +7,8 @@
 <title>Welcome</title>
 </head>
 <body>
-	<h1>Medication: </h1><br>
-	<p>Take the blue pill and go to sleep.</p><br>
+	<h1>Your Presciption: </h1><br>
+	<p>Take the blue pill and go back to sleep.</p><br>
 	<p>Or take the red pill and see how deep the rabbit hole goes.</p>
 </body>
 </html>

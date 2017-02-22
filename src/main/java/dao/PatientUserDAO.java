@@ -18,7 +18,8 @@ public enum PatientUserDAO {
     try {
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(
-    		  "jdbc:mysql://34.250.167.112:3306/UserDB", "root", "root");
+    		  //"jdbc:mysql://34.250.167.112:3306/UserDB", "root", "root");
+    		  "jdbc:mysql://localhost:3306/UserDB", "root", "Poiu0987");
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -57,6 +58,25 @@ public enum PatientUserDAO {
       e.printStackTrace();
     }
     return user ;
+  }
+  
+  public static PatientUser getPrescription(String email) {
+	  Connection connection = getConnection();
+	  PatientUser user = null ;
+
+	  try {
+		  PreparedStatement psmt = connection
+				  .prepareStatement("SELECT prescription FROM patient WHERE EMAIL = ?"); // Use UUID // Use Prescription
+		  psmt.setString(1, email);
+		  ResultSet rs = psmt.executeQuery();
+		  if (rs.next()) {
+			  user = new PatientUser(rs.getString("email"), rs.getString("password"), 
+					  					rs.getString("address"), rs.getString("prescription")) ;
+		  }
+	  } catch (SQLException e) {
+		  e.printStackTrace();
+	  }
+	  return user ;
   }
 
 }

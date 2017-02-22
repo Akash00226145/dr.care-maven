@@ -6,10 +6,10 @@ import java.sql.Statement;
 public class PatientUser {
 	
 	private int id;
-	//private String name;
 	private String email;
 	private String address;
 	private String password;
+	private String perscription;
 
 	public PatientUser(int id, String email, String password) {
 		this.id = id;
@@ -20,7 +20,7 @@ public class PatientUser {
 		this.password = password;
 	}
 	
-	public PatientUser(String email, String address, String password) {
+	public PatientUser(String email, String address, String password, String perscription) {
 		//this.name = name;
 		this.email = email;
 		this.address = address;
@@ -79,5 +79,13 @@ public class PatientUser {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public String getPerscription() {
+		return perscription;
+	}
+
+	public void setPerscription(String perscription) {
+		this.perscription = perscription;
 	}
 }

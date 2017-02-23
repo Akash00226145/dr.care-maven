@@ -10,13 +10,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<<<<<<< HEAD
-
    
 	<h1>Your Presciption: </h1><br>
 	
-	
-	${prescription.medicine}
+	<h2>Medicine:</h2>
+	${prescription.medicine}<br>
+	<h2>Method:</h2>
 	${prescription.method}
 	
 

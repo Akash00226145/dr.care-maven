@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import model.PatientUser;
+import model.Prescription;
 
 public enum PatientUserDAO {
   instance;
@@ -18,8 +19,7 @@ public enum PatientUserDAO {
     try {
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(
-    		  //"jdbc:mysql://34.250.167.112:3306/UserDB", "root", "root");
-    		  "jdbc:mysql://localhost:3306/UserDB", "root", "Poiu0987");
+    		  "jdbc:mysql://34.250.167.112:3306/UserDB", "root", "root");
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -60,23 +60,22 @@ public enum PatientUserDAO {
     return user ;
   }
   
-  public static PatientUser getPrescription(String email) {
+  public static Prescription getPrescription(int pid) {
 	  Connection connection = getConnection();
-	  PatientUser user = null ;
+	  Prescription prescription = null ;
 
 	  try {
 		  PreparedStatement psmt = connection
-				  .prepareStatement("SELECT prescription FROM patient WHERE EMAIL = ?"); // Use UUID // Use Prescription
-		  psmt.setString(1, email);
+				  .prepareStatement("SELECT * FROM prescription WHERE p_id = ?"); // Use UUID // Use Prescription
+		  psmt.setInt(1, pid);
 		  ResultSet rs = psmt.executeQuery();
 		  if (rs.next()) {
-			  user = new PatientUser(rs.getString("email"), rs.getString("password"), 
-					  					rs.getString("address"), rs.getString("prescription")) ;
+			  prescription = new Prescription(rs.getString("method"), rs.getString("medicine")) ;
 		  }
 	  } catch (SQLException e) {
 		  e.printStackTrace();
 	  }
-	  return user ;
+	  return prescription;
   }
 
 }

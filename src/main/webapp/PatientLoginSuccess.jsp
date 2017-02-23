@@ -1,14 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+   pageEncoding="ISO-8859-1" isELIgnored="false"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Welcome</title>
+<title>Insert title here</title>
 </head>
 <body>
+
+   
 	<h1>Your Presciption: </h1><br>
-	<p>Take the blue pill and go back to sleep.</p><br>
-	<p>Or take the red pill and see how deep the rabbit hole goes.</p>
+	
+	
+	${prescription.medicine}
+	${prescription.method}
+	
 </body>
 </html>

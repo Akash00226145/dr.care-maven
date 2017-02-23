@@ -63,7 +63,7 @@ public enum PatientUserDAO {
   }
   
 
-  public static Prescription getPrescription(int pid) {
+  public static Prescription getPrescription1(int pid) {
 	  Connection connection = getConnection();
 	  Prescription prescription = null ;
 

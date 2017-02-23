@@ -10,6 +10,13 @@ public class PatientUser {
 	private String email;
 	private String address;
 	private String password;
+	private long EMID;
+
+	
+
+	public PatientUser() {
+		super();
+	}
 
 	public PatientUser(int id, String email, String password) {
 		this.id = id;
@@ -20,6 +27,15 @@ public class PatientUser {
 		this.password = password;
 	}
 	
+	public PatientUser(int id, String email, String address, String password, long eMID) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.address = address;
+		this.password = password;
+		EMID = eMID;
+	}
+
 	public PatientUser(String email, String address, String password) {
 		//this.name = name;
 		this.email = email;
@@ -27,6 +43,8 @@ public class PatientUser {
 		//this.phone = phone;
 		this.password = password;
 	}
+	
+	
 
 /*	public int getPhone() {
 		return phone;
@@ -79,5 +97,13 @@ public class PatientUser {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public long getEMID() {
+		return EMID;
+	}
+
+	public void setEMID(long eMID) {
+		EMID = eMID;
 	}
 }

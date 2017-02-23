@@ -112,5 +112,24 @@ public enum PharmacistDAO {
 	    return PatientUser;
 	  }
 
+  public static PatientUser getPatient(long Emid) {
+	    Connection connection = getConnection();
+	    PatientUser user = null ;
+
+	    try {
+	      PreparedStatement psmt = connection
+	          .prepareStatement("SELECT ID, EMAIL, PASSWORD, address, EMID FROM patient WHERE EMID = ?");
+	      psmt.setLong(1, Emid);
+	      ResultSet rs = psmt.executeQuery();
+	      if (rs.next()) {
+	        user = new PatientUser(rs.getInt("id"), rs.getString("email"), rs.getString("password"),rs.getString("address"), Emid) ;
+	        
+	      }
+	    } catch (SQLException e) {
+	      e.printStackTrace();
+	    }
+	    return user ;
+	  }
+
 
 }

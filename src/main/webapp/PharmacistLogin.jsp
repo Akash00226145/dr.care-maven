@@ -29,7 +29,7 @@
 		<div class="container" id="main">
 
 			<div class="navbar navbar-fixed-top">
-				<div class="container">
+				<div class="container" style="padding: 0;">
 					
 					<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
 						<span class="icon-bar"></span>
@@ -48,13 +48,19 @@
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
 										<li>
-											<a href="#">Web Design</a>
+											<a href="adminlogin.jsp">Admin Login</a>
 										</li>
 										<li>
-											<a href="#">About Us</a>
+											<a href="#">GP Login</a>
 										</li>
 										<li>
-											<a href="#">Contact Us</a>
+											<a href="#">Pharmacist Login</a>
+										</li>
+										<li>
+											<a href="OtherStaffLogin.jsp">Other Staff Login</a>
+										</li>
+										<li>
+											<a href="#">Patient Login</a>
 										</li>
 										<li class="divider"></li>
 
@@ -63,13 +69,13 @@
 											<a href="#">About Us</a>
 										</li>
 										<li>
-											<a href="#">Shocial Media</a>
+											<a href="#">Social Media</a>
 										</li>
 									</ul>
 							</li>
 						</ul>
 
-						<form class="navbar-form pull-left" >
+						<form class="navbar-form pull-left"  >
 							<input type="text" class="form-control" placeholder="Search product..." id="searchInput">
 							<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 						</form><!-- end navbar-form -->
@@ -91,6 +97,7 @@
 				</div>
 				
 			</div>
+
 
 
 			<div class="container">

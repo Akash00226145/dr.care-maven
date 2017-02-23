@@ -62,6 +62,25 @@ public enum PatientUserDAO {
     return user ;
   }
   
+
+  public static Prescription getPrescription1(int pid) {
+	  Connection connection = getConnection();
+	  Prescription prescription = null ;
+
+	  try {
+		  PreparedStatement psmt = connection
+				  .prepareStatement("SELECT * FROM prescription WHERE p_id = ?"); // Use UUID // Use Prescription
+		  psmt.setInt(1, pid);
+		  ResultSet rs = psmt.executeQuery();
+		  if (rs.next()) {
+			  prescription = new Prescription(rs.getString("method"), rs.getString("medicine")) ;
+		  }
+	  } catch (SQLException e) {
+		  e.printStackTrace();
+	  }
+	  return prescription;
+  }
+
   /**
    * get data 1 for only the patient data no EMID inside
    * 
@@ -69,6 +88,7 @@ public enum PatientUserDAO {
   public static PatientUser getPatient(String email) {
 	    Connection connection = getConnection();
 	    PatientUser user = null ;
+
 
 	    try {
 	      PreparedStatement psmt = connection

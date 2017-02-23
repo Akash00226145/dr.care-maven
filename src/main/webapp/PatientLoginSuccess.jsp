@@ -1,5 +1,5 @@
 
-    <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
    pageEncoding="ISO-8859-1" isELIgnored="false"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -7,13 +7,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Welcome</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<h1>Medication: </h1><br>
-	<p>Take the blue pill and go to sleep.</p><br>
-	<p>Or take the red pill and see how deep the rabbit hole goes.</p>
+<<<<<<< HEAD
+
+   
+	<h1>Your Presciption: </h1><br>
 	
+	
+	${prescription.medicine}
 	${prescription.method}
+	
+
 </body>
 </html>

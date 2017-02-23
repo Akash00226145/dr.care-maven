@@ -54,6 +54,7 @@ public class PatientListServlet extends HttpServlet {
 		String address = request.getParameter("address");
 		// String phone = request.getParameter(Integer.toString(phone));
 		String password = request.getParameter("password");
+		String prescription = request.getParameter("prescription");
 		PatientUser patient = new PatientUser(email, address, password);
 
 		PatientUserDAO.instance.save(patient);

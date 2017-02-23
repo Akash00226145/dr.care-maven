@@ -11,7 +11,7 @@
 </head>
 <body>
    
-	<h1>Your Presciption: </h1><br>
+	<h1>Your Prescription: </h1><br>
 	
 	<h2>Medicine:</h2>
 	${prescription.medicine}<br>

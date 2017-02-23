@@ -45,7 +45,7 @@ public class GPloginServlet extends HttpServlet {
    protected void doPost(HttpServletRequest request,
          HttpServletResponse response) throws ServletException, IOException {
      
-	   String name = request.getParameter("email");
+	  String name = request.getParameter("email");
       String password = request.getParameter("password");
       GPuser user = GploginDAO.instance.checkLogin(name, password);
       if (user != null) {

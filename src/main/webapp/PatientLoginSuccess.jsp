@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
    pageEncoding="ISO-8859-1" isELIgnored="false"%>
 
@@ -9,6 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<<<<<<< HEAD
 
    
 	<h1>Your Presciption: </h1><br>
@@ -17,5 +19,6 @@
 	${prescription.medicine}
 	${prescription.method}
 	
+
 </body>
 </html>

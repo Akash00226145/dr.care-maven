@@ -51,10 +51,12 @@ public class PatientLoginServlet extends HttpServlet {
       System.out.println(pid);
       Prescription p= PatientUserDAO.instance.getPrescription(pid);
       if (user != null) {
+
     	 System.out.println("Yes password matched");
          HttpSession session = request.getSession();
          session.setAttribute("user", user);
          request.setAttribute("prescription", p);
+         
          request.getRequestDispatcher("PatientLoginSuccess.jsp").forward(request, response);
       } else {
          request.getRequestDispatcher("index.jsp").forward(request, response);

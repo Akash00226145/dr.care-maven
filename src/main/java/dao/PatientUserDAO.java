@@ -129,4 +129,21 @@ public enum PatientUserDAO {
   public static void main(String args[]){
 	  System.out.println(PatientUserDAO.getPatient("Chris").getAddress());
   }
+  public static Prescription getPrescription(int pid) {
+	  Connection connection = getConnection();
+	  Prescription prescription = null ;
+
+	  try {
+		  PreparedStatement psmt = connection
+				  .prepareStatement("SELECT * FROM prescription WHERE p_id = ?"); // Use UUID // Use Prescription
+		  psmt.setInt(1, pid);
+		  ResultSet rs = psmt.executeQuery();
+		  if (rs.next()) {
+			  prescription = new Prescription(rs.getString("method"), rs.getString("medicine")) ;
+		  }
+	  } catch (SQLException e) {
+		  e.printStackTrace();
+	  }
+	  return prescription;
+  }
 }

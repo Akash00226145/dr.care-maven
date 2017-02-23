@@ -105,7 +105,7 @@
 			     </div>
 			      
 	 <h2 style="font-family: cursive;">Create Patient
-	 <input type="submit" name="uploadsubmit" id="btnupload" value="create"  onclick="javascript:location.href='PatientRegistion.jsp'"/>
+	 <input type="submit" name="uploadsubmit" id="btnupload" value="create"  onclick="javascript:location.href='PatientRegistration.jsp'"/>
 			       </h2>
 			        
 			        

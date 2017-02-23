@@ -9,7 +9,7 @@
 		<meta name="description" content="">
 		
 		<!-- Mobile viewport optimized -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		
 		<!-- Bootstrap CSS -->
 		<link href="asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,9 +29,10 @@
 		<div class="container" id="main">
 
 			<div class="navbar navbar-fixed-top">
-				<div class="container">
+				<div class="container" style="padding: 0;">
 					
-					<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+					<button class="navbar-toggle"
+					data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -93,7 +94,7 @@
 			</div>
 
 		 
-			<div class="container" style="background-color: grey;">
+			<div class="container" style="background-color: white;">
 			 <form class="form-signin"  method="post" action="MySQLServlet">
 			        <h2 class="form-signin-heading">MySQL Sign In</h2>
 			        <label for="inputEmail" class="sr-only">User Name</label>

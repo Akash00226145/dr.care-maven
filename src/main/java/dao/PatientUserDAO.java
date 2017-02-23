@@ -73,7 +73,7 @@ public enum PatientUserDAO {
 		  psmt.setInt(1, pid);
 		  ResultSet rs = psmt.executeQuery();
 		  if (rs.next()) {
-			  prescription = new Prescription(rs.getString("method"), rs.getString("medicine")) ;
+			  prescription = new Prescription(rs.getString("method"), rs.getString("medicine"), rs.getString("video")) ;
 		  }
 	  } catch (SQLException e) {
 		  e.printStackTrace();
@@ -139,7 +139,7 @@ public enum PatientUserDAO {
 		  psmt.setInt(1, pid);
 		  ResultSet rs = psmt.executeQuery();
 		  if (rs.next()) {
-			  prescription = new Prescription(rs.getString("method"), rs.getString("medicine")) ;
+			  prescription = new Prescription(rs.getString("method"), rs.getString("medicine"), rs.getString("video")) ;
 		  }
 	  } catch (SQLException e) {
 		  e.printStackTrace();

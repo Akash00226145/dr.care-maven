@@ -24,55 +24,6 @@
 		<script type="text/javascript" src="asset/js/custom.js"></script>
 <style>
 
-/* Dropdown Button */
-.dropbtn {
-    background-color: #3366cc;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-     max-width: 100% !important;
-      color: #ffffff;
-     border-color: #474949;
-      width: 100%;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-   
-     background-color: #336699;
-  border-color: #2e2f2f;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #0000FF}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
 
 
 </style>
@@ -159,44 +110,12 @@
 			
 			 
 			       
-			            <h2 class="form-signin-heading"   style="font-family: cursive;">MySQL DataBase</h2>
+			            <h2 class="form-signin-heading"   style="font-family: cursive;">MySQL Create DataBase</h2>
 			       
-			       <br>
-  				
-  				
-  				</br>
-  				
-  				 <li class="dropdown">
-								
-								<button class="btn btn-lg btn-primary btn-block" class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;"   data-toggle="dropdown">DataBase Recreated  <strong class="caret"></strong></button>
-								
-								
-									<ul class="dropdown-menu">
-										<li>
-											<a href="MySQL_CreateDataBase.jsp">Create DataBase</a>
-										</li>
-										<li>
-											<a href="MySQL_Backup.jsp">Backup</a>
-										</li>
-										<li>
-											<a href="MySQL_Delete.jsp">Delete</a>
-										</li>
-										
-									</ul>
-							</li>
-							
-			      <br>
-  				</br>
-                  				
-  				 <input type=button onClick="location.href='MySQL_Display_DataBase_Table.jsp'" value='Display Table of DataBase' class="btn btn-lg btn-primary btn-block" >
-  				 
-  				 <br>
-  				</br>
-  				  				
-  				 <input type=button onClick="location.href='MySQL_DataBase_List.jsp'" value='Display List of Users' class="btn btn-lg btn-primary btn-block" >
-  				 
- 				        
-			      	  
+			      
+			      
+             
+  
 </div>
 			       
 			       

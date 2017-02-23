@@ -55,7 +55,7 @@ public class PatientListServlet extends HttpServlet {
 		// String phone = request.getParameter(Integer.toString(phone));
 		String password = request.getParameter("password");
 		String prescription = request.getParameter("prescription");
-		PatientUser patient = new PatientUser(email, address, password, prescription);
+		PatientUser patient = new PatientUser(email, address, password);
 
 		PatientUserDAO.instance.save(patient);
 
@@ -64,9 +64,9 @@ public class PatientListServlet extends HttpServlet {
 			System.out.println("Writting Patient to DB");
 			HttpSession session = request.getSession();
 			session.setAttribute("user", patient);
-			request.getRequestDispatcher("success.jsp").forward(request, response);
+			request.getRequestDispatcher("PatientCreateSuccess.jsp").forward(request, response);
 		} else {
-			request.getRequestDispatcher("PatientRegister.jsp").forward(request, response);
+			request.getRequestDispatcher("PatientRegistration.jsp").forward(request, response);
 			System.out.println("Could not create this Patient");
 		}
 	}

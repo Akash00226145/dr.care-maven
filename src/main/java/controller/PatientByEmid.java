@@ -4,7 +4,10 @@ import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.ServletException;
+<<<<<<< HEAD
 import javax.servlet.annotation.WebServlet;
+=======
+>>>>>>> 4bca16803e6ffc8f8e84579f4f1f90e18d989602
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,9 +17,13 @@ import dao.GploginDAO;
 import dao.PharmacistDAO;
 import model.GPuser;
 import model.PatientUser;
+<<<<<<< HEAD
 @WebServlet("/PatientByEmid")
 
    /**
+=======
+
+>>>>>>> 4bca16803e6ffc8f8e84579f4f1f90e18d989602
 /**
  * Servlet implementation class PatientByEmid
  */

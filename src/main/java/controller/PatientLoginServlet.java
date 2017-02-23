@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.PatientUser;
+import model.Prescription;
 import dao.PatientUserDAO;
 
 /**
@@ -46,10 +47,14 @@ public class PatientLoginServlet extends HttpServlet {
 	  String name = request.getParameter("email");
       String password = request.getParameter("password");
       PatientUser user = PatientUserDAO.instance.checkLogin(name, password);
+      int pid=user.getId();
+      System.out.println(pid);
+      Prescription p= PatientUserDAO.instance.getPrescription(pid);
       if (user != null) {
-    	 System.out.println("Yes password matched");
-         HttpSession session = request.getSession();
-         session.setAttribute("user", user);
+    	  System.out.println("Yes password matched");
+          HttpSession session = request.getSession();
+          session.setAttribute("user", user);
+          request.setAttribute("prescription", p);
          request.getRequestDispatcher("PatientLoginSuccess.jsp").forward(request, response);
       } else {
          request.getRequestDispatcher("index.jsp").forward(request, response);

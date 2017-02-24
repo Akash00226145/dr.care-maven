@@ -101,10 +101,10 @@
 
 			<div class="container">
 			
-			        <h2 class="form-signin-heading"   style="font-family: cursive;">Login Successful</h2>
+			        <h2 class="form-signin-heading"   style="font-family: cursive;">Welcome Dr. :</h2>
 			     </div>
 			      
-	 <h2 style="font-family: cursive;">Create Patient
+	 <h2 style="font-family: cursive;">Create New Patient:
 	 <input type="submit" name="uploadsubmit" id="btnupload" value="create"  onclick="javascript:location.href='PatientRegistration.jsp'"/>
 			       </h2>
 			        

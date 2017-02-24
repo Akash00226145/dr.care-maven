@@ -103,7 +103,8 @@ public enum PharmacistDAO {
 	     
 	      ResultSet rs = psmt.executeQuery();
 	      while (rs.next()) {
-	    	  PatientUser p = new PatientUser(rs.getInt("id"), rs.getString("email"), rs.getString("password")) ;
+	    	  PatientUser p = new PatientUser(rs.getInt("id"), rs.getString("email")
+	    			  							, rs.getString("password"),	rs.getString("address")) ;
 	    	  PatientUser.add(p);
 	      }
 	    } catch (SQLException e) {

@@ -54,7 +54,7 @@ public enum PatientUserDAO {
       psmt.setString(2, password);
       ResultSet rs = psmt.executeQuery();
       if (rs.next()) {
-        user = new PatientUser(rs.getInt("id"), rs.getString("email"), rs.getString("password")) ;
+        user = new PatientUser(rs.getInt("id"), rs.getString("email"), rs.getString("password"), rs.getString("address")) ;
       }
     } catch (SQLException e) {
       e.printStackTrace();
@@ -73,7 +73,7 @@ public enum PatientUserDAO {
 		  psmt.setInt(1, pid);
 		  ResultSet rs = psmt.executeQuery();
 		  if (rs.next()) {
-			  prescription = new Prescription(rs.getString("method"), rs.getString("medicine")) ;
+			  prescription = new Prescription(rs.getString("method"), rs.getString("medicine"), rs.getString("video")) ;
 		  }
 	  } catch (SQLException e) {
 		  e.printStackTrace();
@@ -96,7 +96,7 @@ public enum PatientUserDAO {
 	      psmt.setString(1, email);
 	      ResultSet rs = psmt.executeQuery();
 	      if (rs.next()) {
-	        user = new PatientUser(rs.getInt("id"), rs.getString("email"), rs.getString("password")) ;
+	        user = new PatientUser(rs.getInt("id"), rs.getString("email"), rs.getString("password"), rs.getString("address")) ;
 	        user.setEMID(rs.getLong("emid"));
 	        user.setAddress(rs.getString("address"));
 	      }
@@ -112,23 +112,23 @@ public enum PatientUserDAO {
    private static final String saveEmidByEmail="UPDATE patient SET EMID=? WHERE email=?";
    
   public static void updateEmid(PatientUser user) {
-	    Connection connection = getConnection();
+	  Connection connection = getConnection();
 
-	    try {
-	      PreparedStatement psmt = connection
-	          .prepareStatement(saveEmidByEmail);
+	  try {
+		  PreparedStatement psmt = connection.prepareStatement(saveEmidByEmail);
 	      psmt.setLong(1, user.getEMID());
 	      psmt.setString(2, user.getEmail());
 
 	      psmt.executeUpdate();
-	    } catch (SQLException e) {
+	  } catch (SQLException e) {
 	      e.printStackTrace();
-	    }
 	  }
+  }
 
   public static void main(String args[]){
 	  System.out.println(PatientUserDAO.getPatient("Chris").getAddress());
   }
+  
   public static Prescription getPrescription(int pid) {
 	  Connection connection = getConnection();
 	  Prescription prescription = null ;
@@ -139,7 +139,7 @@ public enum PatientUserDAO {
 		  psmt.setInt(1, pid);
 		  ResultSet rs = psmt.executeQuery();
 		  if (rs.next()) {
-			  prescription = new Prescription(rs.getString("method"), rs.getString("medicine")) ;
+			  prescription = new Prescription(rs.getString("method"), rs.getString("medicine"), rs.getString("video")) ;
 		  }
 	  } catch (SQLException e) {
 		  e.printStackTrace();

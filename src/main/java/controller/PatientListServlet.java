@@ -49,26 +49,40 @@ public class PatientListServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		// String name = request.getParameter("name");
 		String email = request.getParameter("email");
-		String address = request.getParameter("address");
-		// String phone = request.getParameter(Integer.toString(phone));
 		String password = request.getParameter("password");
-		String prescription = request.getParameter("prescription");
-		PatientUser patient = new PatientUser(email, address, password);
+		String address = request.getParameter("address");
+		
+		// Cast emid to string or long? i dont know?
+		
+		String eMID = String.valueOf(request.getParameter("eMID"));
+		
+		Long.valueOf(eMID).longValue();
+		
+		
+		/* LOOOOOOUUUUUUQUAN  !!!!!!!!!!!!! :)
+		 * 
+		 * cast eMID to String ??
+		 * 
+		 */
+		
+		
+	//	PatientUser patient = new PatientUser(email, password, address, eMID);
 
-		PatientUserDAO.instance.save(patient);
+			
+/*		PatientUserDAO.instance.save(patient);
 
 		// return values.
 		if (patient != null) {
 			System.out.println("Writting Patient to DB");
 			HttpSession session = request.getSession();
 			session.setAttribute("user", patient);
-			request.getRequestDispatcher("PatientCreateSuccess.jsp").forward(request, response);
+			request.getRequestDispatcher("GpLoginSuccess.jsp").forward(request, response);
+			System.out.println("Patient created Successfully");
 		} else {
 			request.getRequestDispatcher("PatientRegistration.jsp").forward(request, response);
 			System.out.println("Could not create this Patient");
-		}
+		}*/
 	}
 
 }

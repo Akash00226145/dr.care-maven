@@ -23,7 +23,7 @@
     <div id="player"></div>
 
     <script>
-    	var vidID = ${prescription.video};
+    	//var vidID = ${prescription.video};
      	var tag = document.createElement('script');
      
      // console.log("vidID:" +vidID);

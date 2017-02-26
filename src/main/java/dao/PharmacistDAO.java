@@ -50,16 +50,17 @@ public enum PharmacistDAO {
     return phar;
   }
   */
-  public int PrescriptionSave(String method,String medicine,int id) {
+  public int PrescriptionSave(String method,String medicine,String video,int id) {
 	    Connection connection = getConnection();
 
 	    try {
 	      PreparedStatement psmt = connection
-	          .prepareStatement("INSERT INTO prescription (method, medicine, p_id) VALUES (?, ?, ?)",
+	          .prepareStatement("INSERT INTO prescription (method, medicine,video, p_id) VALUES (?, ?, ?,?)",
 	        	        Statement.RETURN_GENERATED_KEYS);
 	      psmt.setString(1, method);
 	      psmt.setString(2, medicine);
-	      psmt.setInt(3, id);
+	      psmt.setString(3, video);
+	      psmt.setInt(4 ,id);
 
 	      psmt.executeUpdate();
 	      ResultSet rs = psmt.getGeneratedKeys();

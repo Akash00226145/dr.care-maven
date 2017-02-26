@@ -107,6 +107,8 @@
 			        <input type="text" id="method" class="form-control" placeholder="method" name="method" required>
 			        <label for="medicine" class="sr-only">Taken medicine</label>
 			        <input type="text" id="medicine" class="form-control" placeholder="medicine" name="medicine" required>
+			        <label for="medicine" class="sr-only">Video information</label>
+			        <input type="url" id="video" class="form-control" placeholder="video url" name="video" required>
 			        
 			        
 			        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>

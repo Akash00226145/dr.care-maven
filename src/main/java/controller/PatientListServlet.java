@@ -50,29 +50,24 @@ public class PatientListServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		String email = request.getParameter("email");
+		System.out.println(email);
 		String password = request.getParameter("password");
+		System.out.println(password);
 		String address = request.getParameter("address");
-		
-		// Cast emid to string or long? i dont know?
-		
-		String eMID = String.valueOf(request.getParameter("eMID"));
-		
-		Long.valueOf(eMID).longValue();
+	//	Long eMID = Long.parseLong(request.getParameter("eMID"));
 		
 		
-		/* LOOOOOOUUUUUUQUAN  !!!!!!!!!!!!! :)
-		 * 
-		 * cast eMID to String ??
-		 * 
-		 */
+		
+		//Long.valueOf(eMID).longValue();
 		
 		
-	//	PatientUser patient = new PatientUser(email, password, address, eMID);
+				
+		PatientUser patient = new PatientUser(email, password, address);
 
 			
-/*		PatientUserDAO.instance.save(patient);
+		PatientUserDAO.instance.save(patient);
 
-		// return values.
+	 //return values.
 		if (patient != null) {
 			System.out.println("Writting Patient to DB");
 			HttpSession session = request.getSession();
@@ -82,7 +77,7 @@ public class PatientListServlet extends HttpServlet {
 		} else {
 			request.getRequestDispatcher("PatientRegistration.jsp").forward(request, response);
 			System.out.println("Could not create this Patient");
-		}*/
+		}
 	}
 
 }

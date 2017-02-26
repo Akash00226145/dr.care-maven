@@ -107,6 +107,10 @@
 	 <h2 style="font-family: cursive;">Create New Patient:
 	 <input type="submit" name="uploadsubmit" id="btnupload" value="create"  onclick="javascript:location.href='PatientRegistration.jsp'"/>
 			       </h2>
+			       
+			        <h2 style="font-family: cursive;">Create Patient EMID:
+	 <input type="submit" name="uploadsubmit" id="btnupload" value="create"  onclick="javascript:location.href='patientdata1.jsp'"/>
+			       </h2>
 			        
 			        
 			      

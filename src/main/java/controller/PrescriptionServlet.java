@@ -40,10 +40,11 @@ public class PrescriptionServlet extends HttpServlet {
 		   String medicine = request.getParameter("medicine");
 	       String method = request.getParameter("method");
 	       String video = request.getParameter("video");
-	       video=video.substring(32);
+	       video="https://www.youtube.com/v/"+video.substring(32);
+	       
 	       HttpSession session = request.getSession();
 	       int p_id=(Integer) session.getAttribute("p_id");
-	       PharmacistDAO.instance.PrescriptionSave(medicine, method,video, p_id);
+	       PharmacistDAO.instance.PrescriptionSave(method,medicine,video, p_id);
 	       System.out.print(method);
 	       System.out.print(medicine);
 	       System.out.print(video);

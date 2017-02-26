@@ -61,7 +61,8 @@ public class MySQLServlet extends HttpServlet {
          session.setAttribute("user", user);
          request.getRequestDispatcher("success_SQL.jsp").forward(request, response);
       } else {
-         request.getRequestDispatcher("index.jsp").forward(request, response);
+         //request.getRequestDispatcher("index.jsp").forward(request, response);
+         request.getRequestDispatcher("No_success_SQL.jsp").forward(request, response);
          System.out.println("SQL Admin not mached");
       }
    }

@@ -97,6 +97,7 @@
 							<li>
 								<a href="index.jsp">Home</a>
 							</li>
+							
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
@@ -155,6 +156,7 @@
 			<div class="container">
 			
 			 <form class="form-signin"  method="post" action="OthermsLoginServlet">
+			
 			 
 			       
 			            <h2 class="form-signin-heading"   style="font-family: cursive;">MySQL DataBase</h2>
@@ -163,25 +165,38 @@
   				
   				
   				</br>
-			      
-                  <div class="dropdown">
- 					 <button onclick="myFunction()" class="dropbtn">DataBase Created</button>
- 						 <div id="myDropdown" class="dropdown-content">
-   							 <a href="#">Create DataBase</a>
-   								 <a href="#">Backup</a>
-   									 <a href="#">Delete</a>
-  				</div>
   				
-  				<br>
-  				
-  				
+  				 <li class="dropdown">
+								
+								<button class="btn btn-lg btn-primary btn-block" class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;"   data-toggle="dropdown">DataBase Recreated  <strong class="caret"></strong></button>
+								
+								
+									<ul class="dropdown-menu">
+										<li>
+											<a href="MySQL_CreateDataBase.jsp">Create DataBase</a>
+										</li>
+										<li>
+											<a href="MySQL_Backup.jsp">Backup</a>
+										</li>
+										<li>
+											<a href="MySQL_Delete.jsp">Delete</a>
+										</li>
+										
+									</ul>
+							</li>
+							
+			      <br>
   				</br>
- 					  <button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;">Display DataBase</button>
-			       
-			         <button class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;">Display Users Name</button>
-			       
-  
-  
+                  				
+  				 <input type=button onClick="location.href='MySQL_Display_DataBase_Table.jsp'" value='Display Table of DataBase' class="btn btn-lg btn-primary btn-block" >
+  				 
+  				 <br>
+  				</br>
+  				  				
+  				 <input type=button onClick="location.href='MySQL_DataBase_List.jsp'" value='Display List of Users' class="btn btn-lg btn-primary btn-block" >
+  				 
+ 				        
+			      	  
 </div>
 			       
 			       

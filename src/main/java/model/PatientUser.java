@@ -51,7 +51,13 @@ public class PatientUser {
 		this.address = address;
 		this.EMID = eMID;
 	}
-	
+	public PatientUser(String email, String password, String address) {
+
+		this.email = email;
+		this.password = password;
+		this.address = address;
+		
+	}
 	public PatientUser(String email, String password) {
 		this.email = email;
 		this.password = password;

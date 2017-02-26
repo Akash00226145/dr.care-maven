@@ -33,9 +33,10 @@ public enum PatientUserDAO {
 
     try {
       PreparedStatement psmt = connection
-          .prepareStatement("INSERT INTO patient (email, password) VALUES (?, ?)");
+          .prepareStatement("INSERT INTO patient (email, password, address) VALUES (?,?,?)");
       psmt.setString(1, user.getEmail());
       psmt.setString(2, user.getPassword());
+      psmt.setString(3, user.getAddress());
 
       psmt.executeUpdate();
     } catch (SQLException e) {

@@ -103,7 +103,7 @@ public class PharmacistDAOTest extends TestCase {
 				public void testPrescription() throws SQLException{
 					
 					PharmacistDAO a=PharmacistDAO.instance;
-					int b=a.PrescriptionSave("as", "asd", 8);
+					int b=a.PrescriptionSave("as", "asd","asda", 8);
 					try {
 						
 						assertEquals(1,b);

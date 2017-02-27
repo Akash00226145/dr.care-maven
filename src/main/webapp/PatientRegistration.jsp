@@ -104,29 +104,20 @@
 			       
 			        <h2 class="form-signin-heading"   style="font-family: cursive;">Add a Patient:</h2><br>
 			        
-			<!--         <label for="GPName" class="sr-only">Patient Name</label>
-			        <input type="text" id="inputGPName" class="form-control" placeholder="GP Name" name="gpusername" required autofocus><br>
-			  -->      
 			        <label for="gpEmail" class="sr-only">Patient email</label>
-			        <input type="text" id="inputEmail" class="form-control" placeholder="GP email" name="gpemail" required autofocus><br>
+			        <input type="Email" id="email" class="form-control" placeholder="Patient email" name="email" required autofocus><br>
 			        
 			        <label for="gpAddress" class="sr-only">Patient Address</label>
-			        <input type="text" id="inputGPAddress" class="form-control" placeholder="GP Address" name="gpaddress" required autofocus><br>
-			        
-		<!--         <label for="gpPhone" class="sr-only">Patient PhoneNumber</label>  
-			        <input type="text" id="inputGPPhone" class="form-control" placeholder="GP Phone" name="gpphone" required autofocus><br>
-    	-->	       
+			        <input type="text" id="address" class="form-control" placeholder="Patient Address" name="address" required autofocus><br>
+			              
     				<jsp:useBean id="uuid" class="controller.GenerateUUIDBean" />
 			        <label for="UUIDPassword" class="sr-only">Generate Unique Password</label>
-			        <input type="text" value='<jsp:getProperty property="UUID" name="uuid"/>' id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword" disabled> 
-			       
+			        <input type="text" value='<jsp:getProperty property="UUID" name="uuid"/>' id="password" class="form-control" placeholder="UUIDPassword" name="password" > 
+			      
 			        <div class="checkbox">
-			       <!-- <label>
-			            <input type="checkbox" value="remember-me"> Remember me
-			          </label> -->
 			        </div>
 			        <button class="btn btn-lg btn-primary btn-block" type="submit">Create Patient</button>
-			      </form>
+			     </form>
 				
 			</div>
 

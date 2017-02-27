@@ -22,7 +22,11 @@
 		
 		<script type="text/javascript" src="asset/js/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="asset/js/custom.js"></script>
+<style>
 
+
+
+</style>
 	</head>
 	<body>
 	
@@ -44,6 +48,7 @@
 							<li>
 								<a href="index.jsp">Home</a>
 							</li>
+							
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
@@ -101,21 +106,26 @@
 
 			<div class="container">
 			
-			        <h2 class="form-signin-heading"   style="font-family: cursive;">Welcome Dr. :</h2>
-			     </div>
-			      
-	 <h2 style="font-family: cursive;">Create New Patient:
-	 <input type="submit" name="uploadsubmit" id="btnupload" value="create"  onclick="javascript:location.href='PatientRegistration.jsp'"/>
-			       </h2>
-			       
-			        <h2 style="font-family: cursive;">Create Patient EMID:
-	 <input type="submit" name="uploadsubmit" id="btnupload" value="create"  onclick="javascript:location.href='patientdata1.jsp'"/>
-			       </h2>
-			        
-			        
-			      
-				
+			 <form class="form-signin"  method="post" action="OthermsLoginServlet">
 			
+			 
+			       
+			            <h2 class="form-signin-heading"   style="font-family: cursive;">MySQL Create DataBase</h2>
+			       
+			      
+			      
+             
+  
+</div>
+			       
+			       
+			       
+			      </form>
+		
+    </div>
+
+			
+
 
 			<div class="row" id="moreInfo">
 					
@@ -152,12 +162,29 @@
 	
 	<!-- Custom JS -->
 	<script src="asset/includes/js/script.js"></script>
+	<script>
+	
+	/* When the user clicks on the button, 
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+	    document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	// Close the dropdown menu if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn')) {
+
+	    var dropdowns = document.getElementsByClassName("dropdown-content");
+	    var i;
+	    for (i = 0; i < dropdowns.length; i++) {
+	      var openDropdown = dropdowns[i];
+	      if (openDropdown.classList.contains('show')) {
+	        openDropdown.classList.remove('show');
+	      }
+	    }
+	  }
+	}
+	
+	</script>
 	
 	</body>
-
-
-
-
-
-
-

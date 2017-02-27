@@ -7,7 +7,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import controller.GenerateEMID;
+import controller.getpatolddata;
 import model.PatientUser;
+import model.Prescription;
 
 public enum PatientUserDAO {
   instance;
@@ -30,9 +33,10 @@ public enum PatientUserDAO {
 
     try {
       PreparedStatement psmt = connection
-          .prepareStatement("INSERT INTO patient (email, password) VALUES (?, ?)");
+          .prepareStatement("INSERT INTO patient (email, password, address) VALUES (?,?,?)");
       psmt.setString(1, user.getEmail());
       psmt.setString(2, user.getPassword());
+      psmt.setString(3, user.getAddress());
 
       psmt.executeUpdate();
     } catch (SQLException e) {
@@ -51,12 +55,96 @@ public enum PatientUserDAO {
       psmt.setString(2, password);
       ResultSet rs = psmt.executeQuery();
       if (rs.next()) {
-        user = new PatientUser(rs.getInt("id"), rs.getString("email"), rs.getString("password")) ;
+        user = new PatientUser(rs.getInt("id"), rs.getString("email"), rs.getString("password"), rs.getString("address")) ;
       }
     } catch (SQLException e) {
       e.printStackTrace();
     }
     return user ;
   }
+  
 
+  public static Prescription getPrescription1(int pid) {
+	  Connection connection = getConnection();
+	  Prescription prescription = null ;
+
+	  try {
+		  PreparedStatement psmt = connection
+				  .prepareStatement("SELECT * FROM prescription WHERE p_id = ?"); // Use UUID // Use Prescription
+		  psmt.setInt(1, pid);
+		  ResultSet rs = psmt.executeQuery();
+		  if (rs.next()) {
+			  prescription = new Prescription(rs.getString("method"), rs.getString("medicine"), rs.getString("video")) ;
+		  }
+	  } catch (SQLException e) {
+		  e.printStackTrace();
+	  }
+	  return prescription;
+  }
+
+  /**
+   * get data 1 for only the patient data no EMID inside
+   * 
+   */
+  public static PatientUser getPatient(String email) {
+	    Connection connection = getConnection();
+	    PatientUser user = null ;
+
+
+	    try {
+	      PreparedStatement psmt = connection
+	          .prepareStatement("SELECT ID, EMAIL, PASSWORD, address, EMID FROM patient WHERE EMAIL = ?");
+	      psmt.setString(1, email);
+	      ResultSet rs = psmt.executeQuery();
+	      if (rs.next()) {
+	        user = new PatientUser(rs.getInt("id"), rs.getString("email"), rs.getString("password"), rs.getString("address")) ;
+	        user.setEMID(rs.getLong("emid"));
+	        user.setAddress(rs.getString("address"));
+	      }
+	    } catch (SQLException e) {
+	      e.printStackTrace();
+	    }
+	    return user ;
+	  }
+  
+  /**
+   new save add EMID */
+  
+   private static final String saveEmidByEmail="UPDATE patient SET EMID=? WHERE email=?";
+   
+  public static void updateEmid(PatientUser user) {
+	  Connection connection = getConnection();
+
+	  try {
+		  PreparedStatement psmt = connection.prepareStatement(saveEmidByEmail);
+	      psmt.setLong(1, user.getEMID());
+	      psmt.setString(2, user.getEmail());
+
+	      psmt.executeUpdate();
+	  } catch (SQLException e) {
+	      e.printStackTrace();
+	  }
+  }
+
+  public static void main(String args[]){
+	  System.out.println(PatientUserDAO.getPatient("Chris").getAddress());
+  }
+  
+  public static Prescription getPrescription(int pid) {
+	  Connection connection = getConnection();
+	  Prescription prescription = null ;
+
+	  try {
+		  PreparedStatement psmt = connection
+				  .prepareStatement("SELECT * FROM prescription WHERE p_id = ?"); // Use UUID // Use Prescription
+		  psmt.setInt(1, pid);
+		  ResultSet rs = psmt.executeQuery();
+		  if (rs.next()) {
+			  prescription = new Prescription(rs.getString("method"), rs.getString("medicine"), rs.getString("video")) ;
+		  }
+	  } catch (SQLException e) {
+		  e.printStackTrace();
+	  }
+	  return prescription;
+  }
 }

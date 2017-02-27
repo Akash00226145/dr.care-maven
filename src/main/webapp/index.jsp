@@ -154,7 +154,7 @@
 						</div>
 						<img class="product_image" src="asset/images/admin2.png" alt="HTML5">
 						<p>GP login here</p>
-						<h3 class="btn btn-warning btn-block pha1-btn">LOGIN</h3>
+						<h3 class="btn btn-warning btn-block gp-btn">LOGIN</h3>
 					</div>
 				</div> 
 				

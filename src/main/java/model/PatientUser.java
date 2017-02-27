@@ -6,56 +6,62 @@ import java.sql.Statement;
 public class PatientUser {
 	
 	private int id;
-	//private String name;
 	private String email;
 	private String address;
 	private String password;
+	private long EMID;
 
-	public PatientUser(int id, String email, String password) {
+	
+
+	public PatientUser() {
+		super();
+	}
+
+
+	public PatientUser(int id, String email, String password, String address) {
 		this.id = id;
-		//this.name = name;
 		this.email = email;
-		//this.address = address;
-		//this.phone = phone;
 		this.password = password;
+		this.address = address;
 	}
 	
-	public PatientUser(String email, String address, String password) {
-		//this.name = name;
+
+	public PatientUser(int id, String email, String password, String address, long eMID) {
+		super();
+		this.id = id;
 		this.email = email;
-		this.address = address;
-		//this.phone = phone;
 		this.password = password;
+		this.address = address;
+		EMID = eMID;
 	}
-
-/*	public int getPhone() {
-		return phone;
-	}
-
-	public void setPhone(int phone) {
-		this.phone = phone;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
+	
+ /*public PatientUser(int id, String email, String password, String address, long eMID) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.password = password;
+		this.address = address;
+		this.EMID = eMID;
 	}*/
 
-	public String getAddress() {
-		return address;
-	}
+	public PatientUser(String email, String password, String address, long eMID) {
 
-	public void setAddress(String address) {
+		this.email = email;
+		this.password = password;
 		this.address = address;
+		this.EMID = eMID;
 	}
+	public PatientUser(String email, String password, String address) {
 
+		this.email = email;
+		this.password = password;
+		this.address = address;
+		
+	}
 	public PatientUser(String email, String password) {
 		this.email = email;
 		this.password = password;
-	}
+	}	
 
 	public int getId() {
 		return id;
@@ -79,5 +85,22 @@ public class PatientUser {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public long getEMID() {
+		return EMID;
+	}
+
+	public void setEMID(long eMID) {
+		EMID = eMID;
+
 	}
 }

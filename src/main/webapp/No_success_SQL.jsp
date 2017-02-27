@@ -62,6 +62,13 @@
 										<li>
 											<a href="#">Patient Login</a>
 										</li>
+										
+										<li>
+											<a href="MySQLAdmin.jsp">MySQL Login</a>
+										</li>
+										
+										
+																				
 										<li class="divider"></li>
 
 										<li class="dropdown-header">More Services</li>
@@ -101,22 +108,14 @@
 
 			<div class="container">
 			
-			        <h2 class="form-signin-heading"   style="font-family: cursive;">Welcome Dr. :</h2>
+			        <h2 class="form-signin-heading"   style="font-family: cursive;">Login Problem</h2>
 			     </div>
 			      
-	 <h2 style="font-family: cursive;">Create New Patient:
-	 <input type="submit" name="uploadsubmit" id="btnupload" value="create"  onclick="javascript:location.href='PatientRegistration.jsp'"/>
+	 <h2 style="font-family: cursive;">Return to main menu =>
+	 
+	 <input type="submit" name="uploadsubmit" id="btnupload" value="GO"  onclick="javascript:location.href='index.jsp'"/>
 			       </h2>
-			       
-			        <h2 style="font-family: cursive;">Create Patient EMID:
-	 <input type="submit" name="uploadsubmit" id="btnupload" value="create"  onclick="javascript:location.href='patientdata1.jsp'"/>
-			       </h2>
-			        
-			        
-			      
-				
-			
-
+			     
 			<div class="row" id="moreInfo">
 					
 			</div>
@@ -154,10 +153,3 @@
 	<script src="asset/includes/js/script.js"></script>
 	
 	</body>
-
-
-
-
-
-
-

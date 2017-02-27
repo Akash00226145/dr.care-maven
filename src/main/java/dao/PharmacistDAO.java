@@ -50,16 +50,17 @@ public enum PharmacistDAO {
     return phar;
   }
   */
-  public int PrescriptionSave(String method,String medicine,int id) {
+  public int PrescriptionSave(String method,String medicine,String video,int id) {
 	    Connection connection = getConnection();
 
 	    try {
 	      PreparedStatement psmt = connection
-	          .prepareStatement("INSERT INTO prescription (method, medicine, p_id) VALUES (?, ?, ?)",
+	          .prepareStatement("INSERT INTO prescription (method, medicine,video, p_id) VALUES (?, ?, ?,?)",
 	        	        Statement.RETURN_GENERATED_KEYS);
 	      psmt.setString(1, method);
 	      psmt.setString(2, medicine);
-	      psmt.setInt(3, id);
+	      psmt.setString(3, video);
+	      psmt.setInt(4 ,id);
 
 	      psmt.executeUpdate();
 	      ResultSet rs = psmt.getGeneratedKeys();
@@ -103,13 +104,33 @@ public enum PharmacistDAO {
 	     
 	      ResultSet rs = psmt.executeQuery();
 	      while (rs.next()) {
-	    	  PatientUser p = new PatientUser(rs.getInt("id"), rs.getString("email"), rs.getString("password")) ;
+	    	  PatientUser p = new PatientUser(rs.getInt("id"), rs.getString("email")
+	    			  							, rs.getString("password"),	rs.getString("address")) ;
 	    	  PatientUser.add(p);
 	      }
 	    } catch (SQLException e) {
 	      e.printStackTrace();
 	    }
 	    return PatientUser;
+	  }
+
+  public static PatientUser getPatient(long Emid) {
+	    Connection connection = getConnection();
+	    PatientUser user = null ;
+
+	    try {
+	      PreparedStatement psmt = connection
+	          .prepareStatement("SELECT ID, EMAIL, PASSWORD, address, EMID FROM patient WHERE EMID = ?");
+	      psmt.setLong(1, Emid);
+	      ResultSet rs = psmt.executeQuery();
+	      if (rs.next()) {
+	        user = new PatientUser(rs.getInt("id"), rs.getString("email"), rs.getString("password"),rs.getString("address"), Emid) ;
+	        
+	      }
+	    } catch (SQLException e) {
+	      e.printStackTrace();
+	    }
+	    return user ;
 	  }
 
 

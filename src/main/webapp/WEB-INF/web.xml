@@ -34,6 +34,12 @@
   	<description></description>
   	<servlet-class>controller.AdminAfterLogin</servlet-class>
   </servlet>
+  <servlet>	
+  	<servlet-name>getpatolddata</servlet-name>
+  	<display-name>getpatolddata</display-name>
+  	<description></description>
+  	<servlet-class>controller.getpatolddata</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>GPUUIDServlet</servlet-name>
   	<url-pattern>/GPUUIDServlet</url-pattern>
@@ -53,5 +59,9 @@
   <servlet-mapping>
   	<servlet-name>AdminAfterLogin</servlet-name>
   	<url-pattern>/AdminAfterLogin</url-pattern>
+   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>getpatolddata</servlet-name>
+  	<url-pattern>/getpatolddata</url-pattern>
   </servlet-mapping>
 </web-app>

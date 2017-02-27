@@ -34,7 +34,7 @@ public class PatientUserDAOTest extends TestCase {
 	public void testCheckUser() throws SQLException {
 		PatientUser user = null;
 		 try {
-			  user = PatientUserDAO.checkLogin("Emma", "123");
+			  user = PatientUserDAO.checkLogin("e@g.c", "123");
 			  assertNotNull(user);
 	          } catch (Exception e) {
 

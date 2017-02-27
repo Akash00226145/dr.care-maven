@@ -121,12 +121,9 @@
 			        <jsp:useBean id="uuid" class="controller.GenerateUUIDBean" />
 			        <label for="UUIDPassword" class="sr-only">Generate Unique Password</label>
 
-			        <input type="text" value='<jsp:getProperty property="UUID" name="uuid"/>' id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword" disabled><br> 
-			       
-
 			        <input type="text" value='<jsp:getProperty property="UUID" name="uuid"/>' id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword"> 
-0
-			       
+
+			       	<br>
 			        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Upload">Create GP</button><br><br>
 			      </form>
 				

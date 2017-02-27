@@ -7,6 +7,8 @@ public class GPuser {
 	private String address;
 	private int phone;
 	private String fileName;
+	
+	
 	public String getFileName() {
 		return fileName;
 	}
@@ -34,11 +36,17 @@ public class GPuser {
 		this.fileName = fileName;
 		this.password = password;	
 	}
-
-	public GPuser(String email, String password) {
+	
+	public GPuser(int id,String name, String email, String address, int phone,String fileName, String password) {
+		this.id = id;
+		this.name = name;
 		this.email = email;
-		this.password = password;
+		this.address = address;
+		this.phone = phone;
+		this.fileName = fileName;
+		this.password = password;	
 	}
+
 
 	public int getId() {
 		return id;
@@ -87,4 +95,11 @@ public class GPuser {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	@Override
+    public String toString() {
+        return "GPuser [id=" + id + ", name=" + name
+                + ", email=" + email + ", address=" + address + ", phone="
+                + phone + ", fileName=" + fileName +" , password=" + password + "]";
+    }    
 }

@@ -105,7 +105,8 @@ public class GPRegisterServlet extends HttpServlet {
 		  System.out.println("Writting GP to DB");
 		  HttpSession session = request.getSession();
 		  session.setAttribute("user", gpUser);
-		  request.getRequestDispatcher("success.jsp").forward(request, response);
+		 // request.getRequestDispatcher("success.jsp").forward(request, response);
+		  response.sendRedirect("AdminAfterLogin?action=listUser");
 	  }else{
 		  request.getRequestDispatcher("GPRegister.jsp").forward(request, response);
 		  System.out.println("Could not create this GP");

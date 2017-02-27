@@ -18,7 +18,7 @@ public enum GploginDAO {
     try {
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(
-    		  "jdbc:mysql://192.168.23.78:3306/UserDB", "root", "");
+    		  "jdbc:mysql://34.250.167.112:3306/UserDB", "root", "root");
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -31,7 +31,7 @@ public enum GploginDAO {
 
     try {
       PreparedStatement psmt = connection
-          .prepareStatement("SELECT * FROM gplogin WHERE EMAIL = ? AND PASSWORD = ?");
+          .prepareStatement("SELECT * FROM GPR WHERE EMAIL = ? AND PASSWORD = ?");
       psmt.setString(1, email);
       psmt.setString(2, password);
       ResultSet rs = psmt.executeQuery();

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+   pageEncoding="ISO-8859-1" isELIgnored="false"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -29,7 +31,7 @@
 		<div class="container" id="main">
 
 			<div class="navbar navbar-fixed-top">
-				<div class="container">
+				<div class="container" style="padding: 0;">
 					
 					<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
 						<span class="icon-bar"></span>
@@ -48,13 +50,19 @@
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
 										<li>
-											<a href="#">Web Design</a>
+											<a href="adminlogin.jsp">Admin Login</a>
 										</li>
 										<li>
-											<a href="#">About Us</a>
+											<a href="#">GP Login</a>
 										</li>
 										<li>
-											<a href="#">Contact Us</a>
+											<a href="#">Pharmacist Login</a>
+										</li>
+										<li>
+											<a href="OtherStaffLogin.jsp">Other Staff Login</a>
+										</li>
+										<li>
+											<a href="#">Patient Login</a>
 										</li>
 										<li class="divider"></li>
 
@@ -63,13 +71,13 @@
 											<a href="#">About Us</a>
 										</li>
 										<li>
-											<a href="#">Shocial Media</a>
+											<a href="#">Social Media</a>
 										</li>
 									</ul>
 							</li>
 						</ul>
 
-						<form class="navbar-form pull-left" >
+						<form class="navbar-form pull-left"  >
 							<input type="text" class="form-control" placeholder="Search product..." id="searchInput">
 							<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 						</form><!-- end navbar-form -->
@@ -94,18 +102,39 @@
 
 
 			<div class="container">
-			 <form class="form-signin"  method="post" action="AdminLoginServlet">
-			        <h2 class="form-signin-heading">Admin sign in</h2>
-			        <label for="inputEmail" class="sr-only">User Name</label>
-			        <input type="email" id="inputEmail" class="form-control" placeholder="User Name" name="email" required autofocus>
-			        <label for="inputPassword" class="sr-only">Password</label>
-			        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
-			        <div class="checkbox">
-			          <label>
-			            <input type="checkbox" value="remember-me"> Remember me
-			          </label>
-			        </div>
-			        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+			 <form class="form-signin"  method="post" action="AdminAfterLogin">
+			       
+			        <h2 class="form-signin-heading">Edit GP Record</h2><br>
+			        
+			        <label>GP ID : <c:out value="${gps.id}"></c:out></label>
+			        
+			        <input type="hidden" name="gpId" value="<c:out value="${gps.id}" />" />
+			        
+			        <label for="GPName" class="sr-only">GP Name</label>
+			        <input type="text" id="inputGPName" class="form-control" placeholder="GP Name" name="gpusername" required autofocus
+			        value = '<c:out value="${gps.name}"></c:out>'><br>
+			        
+			        <label for="gpEmail" class="sr-only">GP email</label>
+			        <input type="text" id="inputEmail" class="form-control" placeholder="GP email" name="gpemail" required autofocus
+			        value='<c:out value="${gps.email}"></c:out>'><br>
+			        
+			        <label for="gpAddress" class="sr-only">GP Address</label>
+			        <input type="text" id="inputGPAddress" class="form-control" placeholder="GP Address" name="gpaddress" required autofocus
+			        value = '<c:out value="${gps.address}"></c:out>'><br>
+			        
+			        <label for="gpPhone" class="sr-only">GP PhoneNumber</label>  
+			        <input type="text" id="inputGPPhone" class="form-control" placeholder="GP Phone" name="gpphone" required autofocus
+			        value = '<c:out value="${gps.phone}"></c:out>'><br>
+    			    
+    			    <input type="hidden" name="hfileName" value="<c:out value="${gps.fileName}" />" />
+    			    <input type="file" name="fileName"><br>
+    			       
+			        <label for="UUIDPassword" class="sr-only">Generate Unique Password</label>
+
+			        <input type="text" value='<c:out value="${gps.password}"></c:out>' id="UUIDPassword" class="form-control" placeholder="UUIDPassword" name="UUIDpassword"> 
+
+			       	<br>
+			        <button class="btn btn-lg btn-primary btn-block" type="submit">Update</button><br><br>
 			      </form>
 				
 			</div>
@@ -148,4 +177,3 @@
 	<script src="asset/includes/js/script.js"></script>
 	
 	</body>
-</html>

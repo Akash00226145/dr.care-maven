@@ -28,6 +28,12 @@
   	<description></description>
   	<servlet-class>controller.PatientPrescripServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>AdminAfterLogin</servlet-name>
+  	<display-name>AdminAfterLogin</display-name>
+  	<description></description>
+  	<servlet-class>controller.AdminAfterLogin</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>GPUUIDServlet</servlet-name>
   	<url-pattern>/GPUUIDServlet</url-pattern>
@@ -43,5 +49,9 @@
   <servlet-mapping>
   	<servlet-name>PatientPrescripServlet</servlet-name>
   	<url-pattern>/PatientPrescripServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdminAfterLogin</servlet-name>
+  	<url-pattern>/AdminAfterLogin</url-pattern>
   </servlet-mapping>
 </web-app>

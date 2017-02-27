@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+   pageEncoding="ISO-8859-1" isELIgnored="false"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-		
+		<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 		<!-- Website Title & Description for Search Engine purposes -->
 		<title></title>
 		<meta name="description" content="">
@@ -23,9 +25,17 @@
 		<script type="text/javascript" src="asset/js/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="asset/js/custom.js"></script>
 
+		<style>
+		table, th, td {
+		    border: 1px solid black;
+		    border-collapse: collapse;
+		}
+		th, td {
+		    padding: 5px;
+		}
+		</style>
 	</head>
 	<body>
-	
 		<div class="container" id="main">
 
 			<div class="navbar navbar-fixed-top">
@@ -107,15 +117,41 @@
 
 
 			<div class="container">
-			
-			        <h2 class="form-signin-heading"   style="font-family: cursive;">Login Successful</h2>
-			     </div>
+		
+			<br><br><br>
+			       <table border=1 >
+			        <thead>
+			            <tr>
+			                <th>Id</th>
+			                <th>Name</th>
+			                <th>Email</th>
+			                <th>Address</th>
+			                <th>Phone</th>
+			                <th>File Name</th>
+			                <th>Password</th>
+			                <th colspan=2>Action</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			            <c:forEach items="${gps}" var="gps">
+			                <tr>
+			                    <td><c:out value="${gps.id}"></c:out></td>
+			                    <td><c:out value="${gps.name}" /></td>
+			                    <td><c:out value="${gps.email}" /></td>
+			                    <td><c:out value="${gps.address}" /></td>
+			                    <td><c:out value="${gps.phone}" /></td>
+			                    <td><c:out value="${gps.fileName}" /></td>
+			                    <td><c:out value="${gps.password}" /></td>
+			                    <td><a href="AdminAfterLogin?action=edit&gpId=<c:out value="${gps.id}"/>">Update</a></td>
+			                    <td><a href="AdminAfterLogin?action=delete&gpId=<c:out value="${gps.id}"/>">Delete</a></td>
+			                </tr>
+			            </c:forEach>
+			        </tbody>
+			    </table>
+			</div>
 			      
-	 <h2 style="font-family: cursive;">Create GP
-	 
-	 <input type="submit" name="uploadsubmit" id="btnupload" value="create"  onclick="javascript:location.href='GPRegistion.jsp'"/>
-			       </h2>
-			        
+	 <h2>Create GP</h2>
+	<input type="submit" class="btn btn-lg btn-primary btn-block" name="uploadsubmit" id="btnupload" value="create"  onclick="javascript:location.href='GPRegistion.jsp'"/>
 			        
 			      
 				
@@ -158,7 +194,7 @@
 	<script src="asset/includes/js/script.js"></script>
 	
 	</body>
-
+</html>
 
 
 

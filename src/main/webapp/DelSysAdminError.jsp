@@ -22,60 +22,7 @@
 		
 		<script type="text/javascript" src="asset/js/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="asset/js/custom.js"></script>
-<style>
 
-/* Dropdown Button */
-.dropbtn {
-    background-color: #3366cc;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-     max-width: 100% !important;
-      color: #ffffff;
-     border-color: #474949;
-      width: 100%;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-   
-     background-color: #336699;
-  border-color: #2e2f2f;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #0000FF}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-
-
-</style>
 	</head>
 	<body>
 	
@@ -97,7 +44,6 @@
 							<li>
 								<a href="index.jsp">Home</a>
 							</li>
-							
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
@@ -116,6 +62,13 @@
 										<li>
 											<a href="#">Patient Login</a>
 										</li>
+										
+										<li>
+											<a href="MySQLAdmin.jsp">MySQL Login</a>
+										</li>
+										
+										
+																				
 										<li class="divider"></li>
 
 										<li class="dropdown-header">More Services</li>
@@ -155,64 +108,14 @@
 
 			<div class="container">
 			
-			 <form class="form-signin"  method="post" action="OthermsLoginServlet">
-			
-			 
-			       
-			            <h2 class="form-signin-heading"   style="font-family: cursive;">MySQL DataBase</h2>
-			       
-			       <br>
-  				
-  				
-  				</br>
-  				
-  				 <li class="dropdown">
-								
-								<button class="btn btn-lg btn-primary btn-block" class="btn btn-lg btn-primary btn-block" type="submit" style="float:right;width=35%;"   data-toggle="dropdown">DataBase Recreated  <strong class="caret"></strong></button>
-								
-								
-									<ul class="dropdown-menu">
-										<li>
-											<a href="MySQL_CreateDataBase.jsp">Create DataBase</a>
-										</li>
-										<li>
-											<a href="MySQL_Backup.jsp">Backup</a>
-										</li>
-										<li>
-											<a href="MySQL_Delete.jsp">Delete</a>
-										</li>
-										
-									</ul>
-							</li>
-							
-			      <br>
-			      </br>
-                  				
-  				 <input type=button onClick="location.href='MySQLCreateDatabase.jsp'" value='Create Database' class="btn btn-lg btn-primary btn-block" >
-  				 
-  				 <br>
-  				</br>
-                  				
-  				 <input type=button onClick="location.href='MySQLAddSysAdmin.jsp'" value='Add New System Admin' class="btn btn-lg btn-primary btn-block" >
-  				 
-  				 <br>
-  				</br>
-  				  				
-  				 <input type=button onClick="location.href='MySQLDelSysAdmin.jsp'" value='Remove System Admin' class="btn btn-lg btn-primary btn-block" >
-  				 
- 				        
-			      	  
-</div>
-			       
-			       
-			       
-			      </form>
-		
-    </div>
-
-			
-
-
+			        <h2 class="form-signin-heading"   style="font-family: cursive;">System Admin not Exist in Database!!</h2>
+			     </div>
+			      
+	 <h2 style="font-family: cursive;">Return to main menu =>
+	 
+	 <input type="submit" name="uploadsubmit" id="btnupload" value="Click"  onclick="javascript:location.href='MySQL_Admin_Main.jsp'"/>
+			       </h2>
+			     
 			<div class="row" id="moreInfo">
 					
 			</div>
@@ -248,29 +151,5 @@
 	
 	<!-- Custom JS -->
 	<script src="asset/includes/js/script.js"></script>
-	<script>
-	
-	/* When the user clicks on the button, 
-	toggle between hiding and showing the dropdown content */
-	function myFunction() {
-	    document.getElementById("myDropdown").classList.toggle("show");
-	}
-
-	// Close the dropdown menu if the user clicks outside of it
-	window.onclick = function(event) {
-	  if (!event.target.matches('.dropbtn')) {
-
-	    var dropdowns = document.getElementsByClassName("dropdown-content");
-	    var i;
-	    for (i = 0; i < dropdowns.length; i++) {
-	      var openDropdown = dropdowns[i];
-	      if (openDropdown.classList.contains('show')) {
-	        openDropdown.classList.remove('show');
-	      }
-	    }
-	  }
-	}
-	
-	</script>
 	
 	</body>

@@ -5,7 +5,7 @@
 	<head>
 		
 		<!-- Website Title & Description for Search Engine purposes -->
-		<title>MySQL Backup</title>
+		<title></title>
 		<meta name="description" content="">
 		
 		<!-- Mobile viewport optimized -->
@@ -22,20 +22,17 @@
 		
 		<script type="text/javascript" src="asset/js/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="asset/js/custom.js"></script>
-<style>
 
-
-
-</style>
 	</head>
 	<body>
-	
+ 	
 		<div class="container" id="main">
 
 			<div class="navbar navbar-fixed-top">
 				<div class="container" style="padding: 0;">
 					
-					<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+					<button class="navbar-toggle"
+					data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -48,24 +45,17 @@
 							<li>
 								<a href="index.jsp">Home</a>
 							</li>
-							
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
 										<li>
-											<a href="adminlogin.jsp">Admin Login</a>
+											<a href="#">Web Design></a>
 										</li>
 										<li>
-											<a href="#">GP Login</a>
+											<a href="#">About Us</a>
 										</li>
 										<li>
-											<a href="#">Pharmacist Login</a>
-										</li>
-										<li>
-											<a href="OtherStaffLogin.jsp">Other Staff Login</a>
-										</li>
-										<li>
-											<a href="#">Patient Login</a>
+											<a href="#">Contact Us</a>
 										</li>
 										<li class="divider"></li>
 
@@ -80,51 +70,48 @@
 							</li>
 						</ul>
 
-						<form class="navbar-form pull-left"  >
+						<form class="navbar-form pull-left" >
 							<input type="text" class="form-control" placeholder="Search product..." id="searchInput">
 							<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 						</form><!-- end navbar-form -->
-						
+ 						
 						<ul class="nav navbar-nav pull-right">
 							<li>
 								<a href="#"><span class="glyphicon glyphicon-user"></span>My Account</a>
 							</li>
 						</ul><!-- end nav pull-right -->
-
+ 
 					</div><!-- end nav-collapse -->
-				</div><!-- end container -->
+ 				</div><!-- end container -->
 				
-			</div><!-- end navbar-->
+ 			</div><!-- end navbar-->
 
-			<div class="row" id="featuresHeading">
+ 			<div class="row" id="featuresHeading">
 				<div class="col-12">
 					
 				</div>
 				
 			</div>
 
-
-			<div class="container">
-			
-			 <form class="form-signin"  method="post" action="OthermsLoginServlet">
-			
-			 
-			       
-			            <h2 class="form-signin-heading"   style="font-family: cursive;">MySQL Backup</h2>
-			       
-			      
-			      
-             
-  
-</div>
-			       
-			       
-			       
+		 
+			<div class="container" style="background-color: white;">
+			 <form class="form-signin"  method="post" action="MySQLDeleteSysAdmin">
+			        <h2 class="form-signin-heading">Remove System Admin</h2>
+			        </p><p><b>
+			        <label for="inputEmail" class="sr-only">Enter User Name</label>
+			        </p><p><b>
+			        <input type="email" id="inputEmail" class="form-control" placeholder="User Name" name="email" required>
+			    	</p><p><b>
+			        <button class="btn btn-lg btn-primary btn-block" type="submit">Remove</button>
+			       	</p><p><b>
+					<p><i>This Action Delete System User from Dr. Care Database, Do it carefully</i></p>
+					
+					</p><p><b>
+					<input type=button onClick="location.href='MySQL_Admin_Main.jsp'" value='Cancel' class="btn btn-lg btn-primary btn-block" >
+					 
 			      </form>
-		
-    </div>
-
-			
+				
+			</div>
 
 
 			<div class="row" id="moreInfo">
@@ -138,12 +125,12 @@
 
 		</div><!-- end container -->
 
-		<footer class="footer">
+ 		<footer class="footer">
 			<div class="container">
 				<div class="row">
 						<img src="asset/images/HTML5White.png" 
 					width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered">
-					<p>&copy; copyright 2016 AIT SRI Web Society</p>
+					<p>&copy; AIT A00200846</p>
 				</div>
 			</div>
 		</footer>
@@ -162,29 +149,6 @@
 	
 	<!-- Custom JS -->
 	<script src="asset/includes/js/script.js"></script>
-	<script>
-	
-	/* When the user clicks on the button, 
-	toggle between hiding and showing the dropdown content */
-	function myFunction() {
-	    document.getElementById("myDropdown").classList.toggle("show");
-	}
-
-	// Close the dropdown menu if the user clicks outside of it
-	window.onclick = function(event) {
-	  if (!event.target.matches('.dropbtn')) {
-
-	    var dropdowns = document.getElementsByClassName("dropdown-content");
-	    var i;
-	    for (i = 0; i < dropdowns.length; i++) {
-	      var openDropdown = dropdowns[i];
-	      if (openDropdown.classList.contains('show')) {
-	        openDropdown.classList.remove('show');
-	      }
-	    }
-	  }
-	}
-	
-	</script>
 	
 	</body>
+</html>

@@ -97,9 +97,13 @@
 			<div class="container" style="background-color: white;">
 			 <form class="form-signin"  method="post" action="MySQLServlet">
 			        <h2 class="form-signin-heading">MySQL Sign In</h2>
+			        	</p><p><b>
 			        <label for="inputEmail" class="sr-only">User Name</label>
+			        </p><p><b>
 			        <input type="email" id="inputEmail" class="form-control" placeholder="User Name" name="email" required autofocus>
+			        </p><p><b>
 			        <label for="inputPassword" class="sr-only">Password</label>
+			        </p><p><b>
 			        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
 			        <div class="checkbox">
 			          <label>

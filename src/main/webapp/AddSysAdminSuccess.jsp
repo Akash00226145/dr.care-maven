@@ -5,7 +5,7 @@
 	<head>
 		
 		<!-- Website Title & Description for Search Engine purposes -->
-		<title>MySQL Backup</title>
+		<title></title>
 		<meta name="description" content="">
 		
 		<!-- Mobile viewport optimized -->
@@ -22,11 +22,7 @@
 		
 		<script type="text/javascript" src="asset/js/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="asset/js/custom.js"></script>
-<style>
 
-
-
-</style>
 	</head>
 	<body>
 	
@@ -48,7 +44,6 @@
 							<li>
 								<a href="index.jsp">Home</a>
 							</li>
-							
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
@@ -67,6 +62,13 @@
 										<li>
 											<a href="#">Patient Login</a>
 										</li>
+										
+										<li>
+											<a href="MySQLAdmin.jsp">MySQL Login</a>
+										</li>
+										
+										
+																				
 										<li class="divider"></li>
 
 										<li class="dropdown-header">More Services</li>
@@ -106,27 +108,14 @@
 
 			<div class="container">
 			
-			 <form class="form-signin"  method="post" action="OthermsLoginServlet">
-			
-			 
-			       
-			            <h2 class="form-signin-heading"   style="font-family: cursive;">Display DataBase Table</h2>
-			       
+			        <h2 class="form-signin-heading"   style="font-family: cursive;">New System Admin Added Sucesfully</h2>
+			     </div>
 			      
-			      
-             
-  
-</div>
-			       
-			       
-			       
-			      </form>
-		
-    </div>
-
-			
-
-
+	 <h2 style="font-family: cursive;">Main Menu =>
+	 
+	 <input type="submit" name="uploadsubmit" id="btnupload" value="GO"  onclick="javascript:location.href='MySQL_Admin_Main.jsp'"/>
+			       </h2>
+			     
 			<div class="row" id="moreInfo">
 					
 			</div>
@@ -162,29 +151,5 @@
 	
 	<!-- Custom JS -->
 	<script src="asset/includes/js/script.js"></script>
-	<script>
-	
-	/* When the user clicks on the button, 
-	toggle between hiding and showing the dropdown content */
-	function myFunction() {
-	    document.getElementById("myDropdown").classList.toggle("show");
-	}
-
-	// Close the dropdown menu if the user clicks outside of it
-	window.onclick = function(event) {
-	  if (!event.target.matches('.dropbtn')) {
-
-	    var dropdowns = document.getElementsByClassName("dropdown-content");
-	    var i;
-	    for (i = 0; i < dropdowns.length; i++) {
-	      var openDropdown = dropdowns[i];
-	      if (openDropdown.classList.contains('show')) {
-	        openDropdown.classList.remove('show');
-	      }
-	    }
-	  }
-	}
-	
-	</script>
 	
 	</body>

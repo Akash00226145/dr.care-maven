@@ -22,6 +22,10 @@ public class MySQLUser {
 		this.password = password;
 		this.address = address;
 	}
+	
+	public MySQLUser(String email) {
+		this.email = email;
+	}
 
 	public int getId() {
 		return id;
